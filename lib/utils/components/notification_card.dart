@@ -20,7 +20,7 @@ class NotificationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
+      height: 90,
       child: Card(
         shape: brdrRad,
         color: color,

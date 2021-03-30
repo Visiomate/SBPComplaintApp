@@ -442,7 +442,7 @@ class _RegisterComplainState extends State<RegisterComplain> {
                                   child: Row(
                                     children: [
                                       Container(
-                                        height: 40,
+                                        height: 33,
                                         width: 100,
                                         decoration: BoxDecoration(
                                           color: Color.fromRGBO(21, 183, 98, 1),
@@ -456,6 +456,7 @@ class _RegisterComplainState extends State<RegisterComplain> {
                                             Icon(
                                               Icons.attach_file,
                                               color: Colors.white,
+                                              size: 16,
                                             ),
                                             Text(
                                               'Attach',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:sbp_complaints_management/utils/components/complain_detail_card.dart';
 
 class ComplaintDetail extends StatefulWidget {
@@ -27,7 +28,7 @@ class Complaint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: EdgeInsets.all(13),
       child: Column(
         children: [
           Container(
@@ -35,61 +36,116 @@ class Complaint extends StatelessWidget {
             height: 70,
             width: 400,
             color: Colors.blue[300],
-            child: Row(
-              children: [
-                Container(
-                  padding: EdgeInsets.fromLTRB(0.0, 17.0, 10.0, 0.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        'Complaint # 1335',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        height: 1,
-                      ),
-                      Container(
-                        padding: EdgeInsets.fromLTRB(33.0, 0.0, 0.0, 0.0),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                ImageIcon(
-                                  AssetImage('assets/calendar.png'),
-                                  color: Colors.white,
-                                  size: 14,
-                                ),
-                                Text(
-                                  'Feb 4, 2021, 4:34 PM',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+            child: ListTile(
+              title: Container(
+                padding: const EdgeInsets.fromLTRB(0, 15, 10, 0),
+                child: Text(
+                  'Complaint # 1335',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500),
                 ),
-                Container(
-                  padding: EdgeInsets.fromLTRB(74, 0, 0, 0),
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Text(
-                      'OPEN',
-                      style: TextStyle(
+              ),
+              subtitle: Container(
+                padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        ImageIcon(
+                          AssetImage('assets/calendar.png'),
                           color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600),
+                          size: 14,
+                        ),
+                        Text(
+                          'Feb 4, 2021, 4:34 PM',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
+                  ],
+                ),
+              ),
+              trailing: Container(
+                padding: EdgeInsets.fromLTRB(20, 0, 0, 20),
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Text(
+                    'OPEN',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700),
                   ),
                 ),
-              ],
+              ),
+              // children: [
+              //   Container(
+              //     padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              //     child: Row(
+              //       children: [
+              //         Row(
+              //           children: [
+              //             Text(
+              //               'Complaint # 1335',
+              //               style: TextStyle(
+              //                   color: Colors.white,
+              //                   fontSize: 14,
+              //                   fontWeight: FontWeight.w500),
+              //             ),
+              //           ],
+              //         ),
+              //         Container(
+              //           padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+              //           child: Column(
+              //             children: [
+              //               Row(
+              //                 children: [
+              //                   ImageIcon(
+              //                     AssetImage('assets/calendar.png'),
+              //                     color: Colors.white,
+              //                     size: 14,
+              //                   ),
+              //                   Text(
+              //                     'Feb 4, 2021, 4:34 PM',
+              //                     style: TextStyle(
+              //                       color: Colors.white,
+              //                     ),
+              //                   ),
+              //                 ],
+              //               ),
+              //             ],
+              //           ),
+              //         ),
+              //         SizedBox(
+              //           height: 1,
+              //         ),
+              //         Container(
+              //           padding: EdgeInsets.fromLTRB(33.0, 0.0, 0.0, 0.0),
+              //           child: Column(
+              //             children: [],
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              //   Container(
+              //     padding: EdgeInsets.fromLTRB(90, 0, 0, 20),
+              //     child: FlatButton(
+              //       onPressed: () {},
+              //       child: Text(
+              //         'OPEN',
+              //         style: TextStyle(
+              //             color: Colors.white,
+              //             fontSize: 14,
+              //             fontWeight: FontWeight.w600),
+              //       ),
+              //     ),
+              //   ),
+              // ],
             ),
           ),
           Container(
@@ -100,7 +156,7 @@ class Complaint extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(10.0, 10.0, 150.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(14.0, 10.0, 150.0, 0.0),
                   child: Column(
                     children: [
                       Row(
@@ -161,7 +217,7 @@ class Complaint extends StatelessWidget {
                   height: 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0.0, 2.0, 55.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 2.0, 57.0, 0.0),
                   child: Column(
                     children: [
                       Text(
@@ -190,7 +246,7 @@ class Complaint extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(10.0, 50.0, 140.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(16.0, 50.0, 140.0, 0.0),
                   child: Column(
                     children: [
                       Row(

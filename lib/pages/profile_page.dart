@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/pages/edit_profile.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
+import 'package:sbp_complaints_management/utils/new_pass_dialog.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -152,9 +153,11 @@ class ProfileBody extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                         child: Button(
                           onPress: () {
-                            // Navigator.of(context).pushReplacement(
-                            //     MaterialPageRoute(
-                            //         builder: (context) => Home()));
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return NewPassDialoge();
+                                });
                           },
                           text: 'Reset Password',
                           color: Color.fromRGBO(39, 165, 232, 1),
