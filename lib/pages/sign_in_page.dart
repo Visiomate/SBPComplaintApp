@@ -28,74 +28,77 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: EdgeInsets.all(40),
-        color: Color.fromRGBO(0, 115, 50, 1),
+      resizeToAvoidBottomInset: false,
+      body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.fromLTRB(20, 100, 20, 0),
-          child: Form(
-            key: _popUpFormKey,
-            child: Column(
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  height: 140,
-                  width: 140,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assets/logo_white.png"),
-                        fit: BoxFit.fill),
+          padding: EdgeInsets.fromLTRB(40, 20, 40, 300),
+          color: Color.fromRGBO(0, 115, 50, 1),
+          child: Container(
+            padding: EdgeInsets.fromLTRB(20, 100, 20, 0),
+            child: Form(
+              key: _popUpFormKey,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    height: 140,
+                    width: 140,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assets/logo_white.png"),
+                          fit: BoxFit.fill),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomTextField(
-                      controller: emailInputController,
-                      hintText: 'Email',
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return 'Email is required';
-                        }
-                        if (!EmailValidator.validate(value)) {
-                          return 'Please enter a valid email';
-                        }
-                        return null;
-                      },
-                    ),
-                    SizedBox(height: 10),
-                    CustomTextField(
-                      controller: passwordInputController,
-                      hintText: '***********',
-                      validator: (value) {
-                        if (value.isEmpty) {
-                          return 'Password is required';
-                        }
-                        return null;
-                      },
-                    ),
-                    SizedBox(height: 20),
-                    Container(
-                      child: Button(
-                        onPress: () {
-                          if (_popUpFormKey.currentState.validate()) {
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (context) => Home(),
-                              ),
-                            );
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CustomTextField(
+                        controller: emailInputController,
+                        hintText: 'Email',
+                        validator: (value) {
+                          if (value.isEmpty) {
+                            return 'Email is required';
                           }
+                          if (!EmailValidator.validate(value)) {
+                            return 'Please enter a valid email';
+                          }
+                          return null;
                         },
-                        text: 'Login',
-                        color: Colors.greenAccent,
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                      SizedBox(height: 10),
+                      CustomTextField(
+                        controller: passwordInputController,
+                        hintText: '***********',
+                        validator: (value) {
+                          if (value.isEmpty) {
+                            return 'Password is required';
+                          }
+                          return null;
+                        },
+                      ),
+                      SizedBox(height: 20),
+                      Container(
+                        child: Button(
+                          onPress: () {
+                            if (_popUpFormKey.currentState.validate()) {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => Home(),
+                                ),
+                              );
+                            }
+                          },
+                          text: 'Login',
+                          color: Colors.greenAccent,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),

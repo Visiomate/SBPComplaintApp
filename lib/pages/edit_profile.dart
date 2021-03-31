@@ -37,11 +37,9 @@ class _EditProfileState extends State<EditProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(
-          onPressed: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => Home()));
-          },
+        leading: IconButton(
+          icon: Icon(Icons.chevron_left_sharp),
+          onPressed: () => Navigator.pop(context),
         ),
         backgroundColor: Color.fromRGBO(21, 183, 98, 1),
         title: Text('Edit Profile'),

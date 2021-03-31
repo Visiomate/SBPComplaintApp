@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/pages/edit_profile.dart';
+import 'package:sbp_complaints_management/pages/home_widget.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/new_pass_dialog.dart';
 
@@ -11,27 +12,34 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: BackButton(
-          onPressed: () {},
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Scaffold(
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.chevron_left_sharp),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Home()));
+            },
+          ),
+          backgroundColor: Color.fromRGBO(21, 183, 98, 1),
+          title: Text('Profile'),
+          // actions: <Widget>[
+          //   Padding(
+          //     padding: EdgeInsets.only(right: 10.0),
+          //     child: GestureDetector(
+          //       onTap: () {},
+          //       child: Icon(
+          //         Icons.file_present,
+          //         size: 26.0,
+          //       ),
+          //     ),
+          //   ),
+          // ],
         ),
-        backgroundColor: Color.fromRGBO(21, 183, 98, 1),
-        title: Text('Profile'),
-        // actions: <Widget>[
-        //   Padding(
-        //     padding: EdgeInsets.only(right: 10.0),
-        //     child: GestureDetector(
-        //       onTap: () {},
-        //       child: Icon(
-        //         Icons.file_present,
-        //         size: 26.0,
-        //       ),
-        //     ),
-        //   ),
-        // ],
+        body: ProfileBody(),
       ),
-      body: ProfileBody(),
     );
   }
 }
@@ -170,9 +178,8 @@ class ProfileBody extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                         child: Button(
                           onPress: () {
-                            Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                    builder: (context) => EditProfile()));
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => EditProfile()));
                           },
                           text: 'Edit Profile',
                           color: Color.fromRGBO(39, 165, 232, 1),

@@ -27,7 +27,7 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
     // SizeConfig().init(context);
     return Container(
       height: 300,
-      padding: EdgeInsets.fromLTRB(0, 0, 0, 80),
+      padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
       ),
@@ -55,7 +55,7 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
       children: [
         Container(
           padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-          height: 320,
+          height: 340,
           width: 300,
           decoration: BoxDecoration(
             color: Color.fromRGBO(232, 232, 232, 1),
@@ -124,7 +124,7 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
                                 // );
                                 //  }
                               },
-                              text: 'Update',
+                              text: 'Update Password',
                               color: Color.fromRGBO(39, 165, 232, 1),
                             ),
                           ),
