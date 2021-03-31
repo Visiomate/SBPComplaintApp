@@ -40,7 +40,7 @@ class _SignUpPageState extends State<SignUpPage> {
       // resizeToAvoidBottomInset: true,
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(top: 20, bottom: 220),
+          padding: EdgeInsets.only(top: 20, bottom: 110),
           color: Color.fromRGBO(0, 115, 50, 1),
           child: Container(
             margin: const EdgeInsets.only(right: 50, left: 50),
@@ -200,7 +200,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   }
                                 },
                                 text: 'Signup',
-                                color: Colors.green[300],
+                                color: Color.fromRGBO(11, 175, 89, 1),
                               ),
                             ),
                           ],

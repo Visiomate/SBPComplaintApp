@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sbp_complaints_management/utils/components/card.dart';
 import 'package:sbp_complaints_management/utils/components/complainCard.dart';
 import 'package:sbp_complaints_management/utils/components/const.dart';
@@ -19,19 +20,27 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Color.fromRGBO(21, 183, 98, 1),
           title: Text('Create New Complain'),
           actions: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(right: 10.0),
-              child: GestureDetector(
-                onTap: () {
-                  print('logout press');
-                },
-                child: ImageIcon(
-                  AssetImage('assets/cx.png'),
-                  size: 25,
-                  color: Colors.white,
-                ),
-              ),
-            ),
+            IconButton(
+                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                icon: FaIcon(FontAwesomeIcons.powerOff),
+                iconSize: 20,
+                onPressed: () {
+                  print("Pressed");
+                }),
+            // Padding(
+            //   padding: EdgeInsets.only(right: 10.0),
+            //   child: GestureDetector(
+            //     onTap: () {
+            //       print('logout press');
+            //     },
+            //     child: FaIcon(FontAwesomeIcons.powerOff),
+            //     // ImageIcon(
+            //     //   AssetImage('assets/dsa.png'),
+            //     //   size: 20,
+            //     //   color: Colors.white,
+            //     // ),
+            //   ),
+            // ),
           ],
         ),
         body: Container(

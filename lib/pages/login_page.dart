@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             builder: (context) => SignUpPage()));
                       },
                       text: 'Sign Up',
-                      color: Colors.green[700],
+                      color: Color.fromRGBO(11, 175, 89, 1),
                     ),
                   ),
                 ),
