@@ -79,6 +79,22 @@ class _SignInPageState extends State<SignInPage> {
                           return null;
                         },
                       ),
+                      GestureDetector(
+                        onTap: () {
+                          print('forgotPassword');
+                        },
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(120, 10, 0, 0),
+                          child: Text(
+                            'forgot password?',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                            textAlign: TextAlign.right,
+                          ),
+                        ),
+                      ),
                       SizedBox(height: 20),
                       Container(
                         child: Button(
