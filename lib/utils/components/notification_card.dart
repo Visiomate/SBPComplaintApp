@@ -19,22 +19,22 @@ class NotificationCard extends StatelessWidget {
       this.padding});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 90,
-      child: Card(
-        shape: brdrRad,
-        color: color,
-        elevation: 0,
-        child: Container(
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ComplaintDetail(),
-                ),
-              );
-            },
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ComplaintDetail(),
+          ),
+        );
+      },
+      child: Container(
+        height: 90,
+        child: Card(
+          shape: brdrRad,
+          color: color,
+          elevation: 0,
+          child: Container(
             child: Container(
               child: Column(
                 children: [
