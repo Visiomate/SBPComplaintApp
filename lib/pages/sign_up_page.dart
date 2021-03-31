@@ -123,6 +123,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         SizedBox(height: 10),
                         CustomTextField(
+                          isPassword: true,
                           controller: _reEnterPasswordController,
                           hintText: 'Re Enter Password',
                           // obscureText: true,
