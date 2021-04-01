@@ -32,7 +32,7 @@ class CardWidget extends StatelessWidget {
         child: Card(
           shape: brdrRad,
           color: Color.fromRGBO(39, 165, 232, 1),
-          elevation: 8,
+          elevation: 5,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[

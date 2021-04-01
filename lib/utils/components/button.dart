@@ -12,14 +12,13 @@ class Button extends StatelessWidget {
     return Container(
       width: 300,
       height: 40,
-
       // color: color,
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
-          color: Colors.grey,
+          color: Colors.grey.withOpacity(0.3),
           spreadRadius: 1,
-          blurRadius: 0,
-          offset: Offset(0, 1), // changes position of shadow
+          blurRadius: 1,
+          offset: Offset(0, 2), // changes position of shadow
         ),
       ], color: color, borderRadius: BorderRadius.circular(10.0)),
       margin: EdgeInsets.only(top: 10),

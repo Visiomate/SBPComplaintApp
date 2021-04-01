@@ -1,6 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/verify.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
@@ -65,7 +66,8 @@ class _SignUpPageState extends State<SignUpPage> {
                       children: [
                         CustomTextField(
                           controller: _firstNameController,
-                          hintText: 'First Name',
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('firstName'),
                           validator: (value) {
                             if (value.isEmpty) {
                               return 'This field is required';
@@ -79,7 +81,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         SizedBox(height: 10),
                         CustomTextField(
                           controller: _lastNameController,
-                          hintText: 'Last Name',
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('lastName'),
                           validator: (value) {
                             if (value.isEmpty) {
                               return 'This field is required';
@@ -93,7 +96,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         SizedBox(height: 10),
                         CustomTextField(
                           controller: _loginIdController,
-                          hintText: 'Login ID',
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('loginId'),
                           validator: (value) {
                             if (value.isEmpty) {
                               return 'This field is required';
@@ -107,7 +111,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         SizedBox(height: 10),
                         CustomTextField(
                           controller: _passwordController,
-                          hintText: 'Password',
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('password'),
                           isPassword: true,
                           validator: (value) {
                             if (value.isEmpty) {
@@ -125,7 +130,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         CustomTextField(
                           isPassword: true,
                           controller: _reEnterPasswordController,
-                          hintText: 'Re Enter Password',
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('reEnterPass'),
                           // obscureText: true,
                           validator: (value) {
                             if (value.isEmpty) {
@@ -146,7 +152,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         CustomTextField(
                           keybrdtype: TextInputType.number,
                           controller: _cnicController,
-                          hintText: 'CNIC',
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('cnic'),
                           validator: (value) {
                             if (value.isEmpty) {
                               return 'This field is required';
@@ -161,7 +168,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         CustomTextField(
                           keybrdtype: TextInputType.number,
                           controller: _mobileController,
-                          hintText: 'Mobile',
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('mobileNum'),
                           validator: (value) {
                             if (value.isEmpty) {
                               return 'This field is required';
@@ -175,7 +183,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         SizedBox(height: 10),
                         CustomTextField(
                           controller: _emailController,
-                          hintText: 'Email',
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('email'),
                           validator: (value) {
                             if (value.isEmpty) {
                               return 'This is required';
@@ -199,7 +208,8 @@ class _SignUpPageState extends State<SignUpPage> {
                                                 VerifyScreen()));
                                   }
                                 },
-                                text: 'Signup',
+                                text: DemoLocalization.of(context)
+                                    .getTranslatedValue('signup'),
                                 color: Color.fromRGBO(11, 175, 89, 1),
                               ),
                             ),

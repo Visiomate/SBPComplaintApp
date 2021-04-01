@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
@@ -57,7 +58,8 @@ class _SignInPageState extends State<SignInPage> {
                     children: [
                       CustomTextField(
                         controller: emailInputController,
-                        hintText: 'Email',
+                        hintText: DemoLocalization.of(context)
+                            .getTranslatedValue('email'),
                         validator: (value) {
                           if (value.isEmpty) {
                             return 'Email is required';
@@ -86,7 +88,8 @@ class _SignInPageState extends State<SignInPage> {
                         child: Container(
                           padding: EdgeInsets.fromLTRB(120, 10, 0, 0),
                           child: Text(
-                            'forgot password?',
+                            DemoLocalization.of(context)
+                                .getTranslatedValue('forGotPass'),
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.white,
@@ -107,7 +110,8 @@ class _SignInPageState extends State<SignInPage> {
                               );
                             }
                           },
-                          text: 'Login',
+                          text: DemoLocalization.of(context)
+                              .getTranslatedValue('login'),
                           color: Color.fromRGBO(11, 175, 89, 1),
                         ),
                       ),

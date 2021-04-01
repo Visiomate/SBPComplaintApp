@@ -1,0 +1,88 @@
+{
+    "login": "لاگ ان کریں",
+    "signup": "سائن اپ",
+
+    
+
+    "firstName":"پہلا نام",
+    "lastName": "آخری نام",
+    "loginId": "لاگ ان ID",
+    "password": "پاس ورڈ",
+    "reEnterPass": "پاس ورڈ دوبارہ درج",
+    "cnic": "شناختی کارڈ ",
+    "mobileNum": "موبائل فون ",
+    "email": "ای میل",
+
+    "otpsend": "ہم نے آپ کو آپ پر OTP بھیج دیا ہے",
+    "otpPhoneNum": "فون نمبر",
+    "otpNotsend": "کیا OTP بازیافت نہیں ہوا؟",
+    "resendOtp": "دوبارہ بھیجیں",
+    "verify": "تصدیق کریں",
+
+    "otpVerified":"مبارک ہو ، او ٹی پی کی توثیق",
+    "otpSuccess":"کامیابی کے ساتھ مکمل ہوا۔",
+    "continues": "جاری رہے",
+
+    "newCompl": "نئی شکایت بنائیں",
+
+    "complainList": "شکایت کی فہرست",
+    "searchComplain": "تلاش کی شکایت ",
+    "complain": "شکایت",
+    "open": "کھلا",
+    "bankStafNoHelp": "بینک عملہ میری مدد نہیں کررہا ہے۔",
+    "complainNo": "شکایت # 1335",
+    "timeComplan": "4 فروری ، 2021 ، 4:34 شام",
+
+    "notification": "اطلاع",
+
+    "profile": "پروفائل",
+    "passReset": "پاس ورڈ ری سیٹ",
+    "editProfBtn": "پروفائل میں ترمیم ",
+
+    "update": "اپ ڈیٹ",
+
+    "createNewPass": "نیا پاس ورڈ بنائیں",
+    "OldPass": "پرانا پاسورڈ",
+    "NewPass": "نیا پاس ورڈ",
+    "updatePass": "پاس ورڈ اپ ڈیٹ کریں",
+
+    "forGotPass" : "پاسورڈ بھول گے؟",
+
+    "registerComp": "شکایت درج کروائیں",
+    "name": "نام",
+    "bankDet": "بینک کی تفصیلات",
+    "bankName": "بینک کا نام",
+    "bankcity": "بینک شہر",
+    "branchCity": "برانچ کا نام",
+    "complaintDeta": "شکایت کی تفصیلات",
+    "complainCategry": "شکایت زمرہ:",
+    "complaintName": "اتم شکایت",
+    "attachmnts": "منسلک کریں",
+    "attchFile": "تصویر ، لفظ یا پی ڈی ایف دستاویزات وغیرہ۔",
+    "attchFileSize": "'زیادہ سے زیادہ سائز کی اجازت 1MB ہے۔",
+    "submitBtn": "جمع کرائیں",
+    "EntrMsg": "ایک پیغام درج کریں",
+
+    "categry1": "زمرہ  1",
+    "categry2": "زمرہ  2",
+    "categry3": "زمرہ  3",
+    "categry4": "زمرہ  4",
+    "categry5": "زمرہ  5",
+    "categry6": "زمرہ  6",
+    "categry7": "زمرہ  7",
+    "categry8": "زمرہ  8",
+    "categry9": "زمرہ  9",
+    "categry10": "زمرہ  10",
+    "categry11": "زمرہ  11",
+    "categry12": "زمرہ  12",
+    "categry13": "زمرہ  13",
+    "categry14": "زمرہ  14"
+
+
+
+
+
+
+
+
+}

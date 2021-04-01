@@ -1,0 +1,83 @@
+{
+    "login": "Login",
+    "signup": "Sign Up",
+    "firstName":"First Name",
+    "lastName": "Last Name",
+    "loginId": "Login ID",
+    "password": " Password",
+    "reEnterPass": "Re Enter Password",
+    "cnic": "CNIC",
+    "mobileNum": " Mobile ",
+    "email": "Email",
+    "otpsend": "We have send you OTP on your",
+    "otpPhoneNum": "phone number",
+    "otpNotsend": "Does not recieved the OTP?",
+    "resendOtp": "Resend",
+    "verify": "Verify",
+
+    "otpVerified":"Congratulations, OTP verification",
+    "otpSuccess":"Completed Successfully",
+    "continues": "Continue",
+
+    "newCompl": "Create New Complain",
+
+    "complainList": "Complain List",
+    "searchComplain": "Search Complain",
+    "complain": "Complaint",
+    
+
+    "open": "open",
+    "bankStafNoHelp": "Bank staff not helping me out.",
+    "complainNo": "Complaint # 1335",
+    "timeComplan": "Feb 4, 2021, 4:34 PM",
+
+    "notification": "Notifications",
+
+    "profile": "profile",
+    "passReset": "Reset Password",
+    "editProfBtn": "Edit Profile",
+
+    "update": "update",
+
+    "createNewPass": "Create New Password",
+    "OldPass": "Old Password",
+    "NewPass": "New Password",
+    "updatePass": "Update Password",
+
+    "forGotPass" : "forgot password?",
+
+    "registerComp": "Register Complaint",
+    "name": "Name",
+    "bankDet": "Bank Details",
+    "bankName": "Bank Name",
+    "bankcity": "Bank City",
+    "branchCity": "Branch Name",
+    "complaintDeta": "Complaint Details",
+    "complainCategry": "Complaint Category:",
+    "complaintName": "Atm Complaint",
+    "attachmnts": "Attach",
+    "attchFile": "Image,word or PDF documents etc.",
+    "attchFileSize": "'Maximum size allowed is 1MB.",
+    "submitBtn": "Submit",
+    "EntrMsg": "Enter a message",
+
+    "categry1": "Category 1",
+    "categry2": "Category 2",
+    "categry3": "Category 3",
+    "categry4": "Category 4",
+    "categry5": "Category 5",
+    "categry6": "Category 6",
+    "categry7": "Category 7",
+    "categry8": "Category 8",
+    "categry9": "Category 9",
+    "categry10": "Category 10",
+    "categry11": "Category 11",
+    "categry12": "Category 12",
+    "categry13": "Category 13",
+    "categry14": "Category 14"
+
+
+
+
+
+}

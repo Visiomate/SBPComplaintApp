@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/verify_continue.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:otp_text_field/otp_field.dart';
@@ -35,14 +36,15 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 Container(
                   padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Text(
-                    'We have send you OTP on your',
+                    DemoLocalization.of(context).getTranslatedValue('otpsend'),
                     style: TextStyle(fontSize: 14, color: Colors.grey[400]),
                   ),
                 ),
                 Container(
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                   child: Text(
-                    ' phone number',
+                    DemoLocalization.of(context)
+                        .getTranslatedValue('otpPhoneNum'),
                     style: TextStyle(fontSize: 14, color: Colors.grey[400]),
                   ),
                 ),
@@ -71,7 +73,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Does not recieved the OTP?',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('otpNotsend'),
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 14,
@@ -80,7 +83,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
                         GestureDetector(
                           onTap: () {},
                           child: Text(
-                            ' Resend',
+                            DemoLocalization.of(context)
+                                .getTranslatedValue('resendOtp'),
                             style: TextStyle(
                                 fontSize: 14, color: Colors.greenAccent[400]),
                           ),
@@ -101,7 +105,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
                                         builder: (context) =>
                                             VerifyContinue()));
                               },
-                              text: 'Verify',
+                              text: DemoLocalization.of(context)
+                                  .getTranslatedValue('verify'),
                               color: Colors.green[700],
                             ),
                           ),

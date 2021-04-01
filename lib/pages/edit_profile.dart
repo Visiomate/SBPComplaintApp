@@ -1,5 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
@@ -42,7 +43,9 @@ class _EditProfileState extends State<EditProfile> {
           onPressed: () => Navigator.pop(context),
         ),
         backgroundColor: Color.fromRGBO(21, 183, 98, 1),
-        title: Text('Edit Profile'),
+        title: Text(
+          DemoLocalization.of(context).getTranslatedValue('editProfBtn'),
+        ),
       ),
       resizeToAvoidBottomInset: false,
       body: Container(
@@ -62,7 +65,8 @@ class _EditProfileState extends State<EditProfile> {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       controller: firstNameInputController,
-                      hintText: 'First Name',
+                      hintText: DemoLocalization.of(context)
+                          .getTranslatedValue('firstName'),
                       validator: (value) {
                         if (value.isEmpty) {
                           return 'First Nmae is required';
@@ -77,7 +81,8 @@ class _EditProfileState extends State<EditProfile> {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       controller: lastNameInputController,
-                      hintText: 'Last Name',
+                      hintText: DemoLocalization.of(context)
+                          .getTranslatedValue('lastName'),
                       validator: (value) {
                         if (value.isEmpty) {
                           return 'Last Nmae is required';
@@ -92,7 +97,8 @@ class _EditProfileState extends State<EditProfile> {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       controller: mobileNumberInputController,
-                      hintText: 'Mobile',
+                      hintText: DemoLocalization.of(context)
+                          .getTranslatedValue('mobileNum'),
                       // '03xx-xxxxxxx',
                       validator: (value) {
                         if (value.isEmpty) {
@@ -108,7 +114,8 @@ class _EditProfileState extends State<EditProfile> {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       controller: emailInputController,
-                      hintText: 'Email',
+                      hintText: DemoLocalization.of(context)
+                          .getTranslatedValue('email'),
                       // 'abc@xyz.com',
                       validator: (value) {
                         if (value.isEmpty) {
@@ -127,7 +134,8 @@ class _EditProfileState extends State<EditProfile> {
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       controller: cnicNumberInputController,
-                      hintText: 'CNIC',
+                      hintText: DemoLocalization.of(context)
+                          .getTranslatedValue('cnic'),
                       // '42202-3900665-1',
                       validator: (value) {
                         if (value.isEmpty) {
@@ -148,7 +156,8 @@ class _EditProfileState extends State<EditProfile> {
                           );
                           //  }
                         },
-                        text: 'Update',
+                        text: DemoLocalization.of(context)
+                            .getTranslatedValue('update'),
                         color: Color.fromRGBO(39, 165, 232, 1),
                       ),
                     ),

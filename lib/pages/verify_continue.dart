@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
@@ -31,14 +32,14 @@ class _VerifyContinueState extends State<VerifyContinue> {
             Container(
               padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
               child: Text(
-                'Congratulations, OTP verification',
+                DemoLocalization.of(context).getTranslatedValue('otpVerified'),
                 style: TextStyle(fontSize: 14, color: Colors.grey),
               ),
             ),
             Container(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
               child: Text(
-                ' completed successfully.',
+                DemoLocalization.of(context).getTranslatedValue('otpSuccess'),
                 style: TextStyle(fontSize: 14, color: Colors.grey),
               ),
             ),
@@ -55,7 +56,8 @@ class _VerifyContinueState extends State<VerifyContinue> {
                         Navigator.of(context).pushReplacement(
                             MaterialPageRoute(builder: (context) => Home()));
                       },
-                      text: 'Continue',
+                      text: DemoLocalization.of(context)
+                          .getTranslatedValue('continues'),
                       color: Colors.green[700],
                     ),
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
 
@@ -71,7 +72,8 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
                   child: Row(
                     children: [
                       Text(
-                        'Create New Password',
+                        DemoLocalization.of(context)
+                            .getTranslatedValue('createNewPass'),
                         style: TextStyle(
                             color: Colors.blue,
                             fontSize: 17,
@@ -92,7 +94,8 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             controller: oldPassInputController,
-                            hintText: 'Old Password',
+                            hintText: DemoLocalization.of(context)
+                                .getTranslatedValue('OldPass'),
                           ),
                           SizedBox(height: 10),
                           CustomTextField(
@@ -101,7 +104,8 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             controller: newPasswordInputController,
-                            hintText: 'New Password',
+                            hintText: DemoLocalization.of(context)
+                                .getTranslatedValue('NewPass'),
                           ),
                           SizedBox(height: 10),
                           CustomTextField(
@@ -110,7 +114,8 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             controller: reEnterpasswordInputController,
-                            hintText: 'Re Enter Password',
+                            hintText: DemoLocalization.of(context)
+                                .getTranslatedValue('reEnterPass'),
                           ),
                           Container(
                             padding: EdgeInsets.fromLTRB(30, 30, 30, 0),
@@ -124,7 +129,8 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
                                 // );
                                 //  }
                               },
-                              text: 'Update Password',
+                              text: DemoLocalization.of(context)
+                                  .getTranslatedValue('updatePass'),
                               color: Color.fromRGBO(39, 165, 232, 1),
                             ),
                           ),
