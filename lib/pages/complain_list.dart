@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
 import 'package:sbp_complaints_management/utils/components/complainCard.dart';
@@ -46,20 +47,26 @@ class _ComplainListPageState extends State<ComplainListPage> {
                           child: SizedBox(
                             height: 40,
                             child: new ListTile(
-                              title: Container(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 5),
-                                child: TextField(
-                                  decoration: new InputDecoration(
-                                      hintText: DemoLocalization.of(context)
-                                          .getTranslatedValue('searchComplain'),
-                                      border: InputBorder.none),
-                                  // onChanged: onSearchTextChanged,
+                              title: Directionality(
+                                textDirection: TextDirection.ltr,
+                                child: Container(
+                                  padding: EdgeInsets.fromLTRB(0, 08, 0, 8),
+                                  child: TextField(
+                                    decoration: new InputDecoration(
+                                        hintText: DemoLocalization.of(context)
+                                            .getTranslatedValue(
+                                                'searchComplain'),
+                                        border: InputBorder.none),
+                                    textAlign: TextAlign.start,
+
+                                    // onChanged: onSearchTextChanged,
+                                  ),
                                 ),
                               ),
                               trailing: Container(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 15),
-                                child: new ImageIcon(
-                                  AssetImage('assets/search.png'),
+                                child: FaIcon(
+                                  FontAwesomeIcons.search,
                                   color: Colors.blue[300],
                                 ),
                               ),
