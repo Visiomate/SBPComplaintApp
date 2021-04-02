@@ -50,36 +50,44 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Row(
                 children: [
-                  Text('Please Select language'),
+                  // Text('Please Select language'),
                   Container(
-                    child: DropdownButton(
-                      onChanged: (Language language) {
-                        _changeLanguage(language);
-                      },
-                      underline: SizedBox(),
-                      icon: Icon(
-                        Icons.language,
-                        color: Colors.green,
+                    padding: EdgeInsets.fromLTRB(80, 0, 70, 0),
+                    child: Center(
+                      child: DropdownButton<Language>(
+                        iconSize: 30,
+                        hint: Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('langname'),
+                        ),
+                        onChanged: (Language language) {
+                          _changeLanguage(language);
+                        },
+                        // underline: SizedBox(),
+                        // icon: Icon(
+                        //   Icons.language,
+                        //   color: Colors.green,
+                        // ),
+                        items: Language.languageList()
+                            .map<DropdownMenuItem<Language>>(
+                                (lang) => DropdownMenuItem(
+                                      value: lang,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: <Widget>[
+                                          Text(
+                                            lang.flag,
+                                          ),
+                                          Text(
+                                            lang.name,
+                                            style: TextStyle(fontSize: 30),
+                                          )
+                                        ],
+                                      ),
+                                    ))
+                            .toList(),
                       ),
-                      items: Language.languageList()
-                          .map<DropdownMenuItem<Language>>(
-                              (lang) => DropdownMenuItem(
-                                    value: lang,
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: <Widget>[
-                                        Text(
-                                          lang.flag,
-                                        ),
-                                        Text(
-                                          lang.name,
-                                          style: TextStyle(fontSize: 30),
-                                        )
-                                      ],
-                                    ),
-                                  ))
-                          .toList(),
                     ),
                   ),
                 ],

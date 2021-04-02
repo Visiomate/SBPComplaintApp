@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/complaint_detail.dart';
 
 class ComplainCardWidget extends StatelessWidget {
@@ -28,6 +29,7 @@ class ComplainCardWidget extends StatelessWidget {
         );
       },
       child: Container(
+        padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
         height: 133,
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -35,46 +37,48 @@ class ComplainCardWidget extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(left: 15, bottom: 15),
-                  child: Column(
-                    children: [
-                      Text(
-                        'OPEN',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
+            Container(
+              alignment: AlignmentDirectional.topStart,
+              // padding: EdgeInsets.only(left: 15, bottom: 15),
+              child: Column(
+                children: [
+                  Text(
+                    'OPEN',
+                    style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.left,
                   ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 260, top: 19),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 24,
-                        child: GestureDetector(
-                          onTap: () {
-                            // Navigator.of(context).push(
-                            //   MaterialPageRoute(
-                            //     builder: (context) => ComplaintDetail(),
-                            //   ),
-                            // );
-                          },
-                          child: Image.asset(
-                            'assets/list2.png',
-                            color: Colors.blue[300],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
             Container(
-              padding: EdgeInsets.fromLTRB(0, 0, 70, 10),
+              padding: EdgeInsets.only(top: 3),
+              alignment: AlignmentDirectional.topEnd,
+              child: Column(
+                children: [
+                  Container(
+                    alignment: AlignmentDirectional.topEnd,
+                    child: GestureDetector(
+                      onTap: () {
+                        // Navigator.of(context).push(
+                        //   MaterialPageRoute(
+                        //     builder: (context) => ComplaintDetail(),
+                        //   ),
+                        // );
+                        //
+                      },
+                      child: Image.asset(
+                        'assets/list2.png',
+                        color: Colors.blue[300],
+                        height: 22,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              alignment: AlignmentDirectional.centerStart,
               child: Column(
                 children: [
                   Text(
@@ -83,86 +87,78 @@ class ComplainCardWidget extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 18,
                         fontWeight: FontWeight.w500),
+                    textAlign: TextAlign.left,
                   ),
                 ],
               ),
             ),
-            Container(
-              padding: EdgeInsets.only(left: 0, top: 0),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Column(
-                        children: [
-                          Row(
-                            children: [
-                              ImageIcon(
-                                AssetImage('assets/complaint.png'),
-                                size: 10,
-                                color: Colors.white,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Text(
-                                'Complaint # 1335',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(left: 17, top: 0),
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.calendar_today,
-                                      size: 10,
-                                      color: Colors.white,
-                                    ),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text(
-                                      'Feb 4, 2021, 4:34 PM',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 12),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ),
-                        ],
+            SizedBox(height: 10),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    ImageIcon(
+                      AssetImage('assets/complaint.png'),
+                      size: 10,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'Complaint # 1335',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
                       ),
-                      Container(
-                        padding: EdgeInsets.only(left: 170, top: 10),
-                        child: Container(
-                          height: 24,
-                          child: GestureDetector(
-                            onTap: () {
-                              // Navigator.of(context).push(
-                              //   MaterialPageRoute(
-                              //     builder: (context) => ComplaintDetail(),
-                              //   ),
-                              // );
-                            },
-                            child: Image.asset(
-                              'assets/mail2.png',
-                              color: Colors.blue[300],
-                            ),
-                          ),
+                      textAlign: TextAlign.left,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(191, 0, 0, 0),
+                      child: GestureDetector(
+                        onTap: () {
+                          // Navigator.of(context).push(
+                          //   MaterialPageRoute(
+                          //     builder: (context) => ComplaintDetail(),
+                          //   ),
+                          // );
+                        },
+                        child: Image.asset(
+                          'assets/mail2.png',
+                          color: Colors.blue[300],
+                          height: 22,
                         ),
                       ),
-                    ],
-                  )
-                ],
-              ),
+                    ),
+                  ],
+                ),
+                // Row(
+                //   children: [
+                //     Text('jdjjd'),
+                //   ],
+                // ),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.calendar_today,
+                          size: 10,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('timeComplan'),
+                          style: TextStyle(color: Colors.white, fontSize: 12),
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
             ),
           ],
         ),
