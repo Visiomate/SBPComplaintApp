@@ -42,13 +42,7 @@ class CardWidget extends StatelessWidget {
           Container(
             height: 100,
             width: 172,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/card2.png"), fit: BoxFit.fill),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(15),
-                  topLeft: Radius.circular(15),
-                )),
+            decoration: decoratn,
           ),
           // Image.asset(
           //   "assets/card.png",

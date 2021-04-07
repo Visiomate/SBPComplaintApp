@@ -58,6 +58,15 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 1,
                       child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
                         // decoratn: new BoxDecoration(
                         //   image: new DecorationImage(
                         //     image: new AssetImage("assets/card.png"),
@@ -75,18 +84,16 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
                         txt: Text(
-                          'Category 1',
+                          'Category 2',
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -103,16 +110,20 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
                         txt: Text(
                           'Category 1',
                           textAlign: TextAlign.center,
@@ -124,18 +135,16 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
                         txt: Text(
-                          'Category 1',
+                          'Category 2',
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -152,16 +161,20 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
                         txt: Text(
                           'Category 1',
                           textAlign: TextAlign.center,
@@ -173,18 +186,16 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
                         txt: Text(
-                          'Category 1',
+                          'Category 2',
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -201,16 +212,20 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
                         txt: Text(
                           'Category 1',
                           textAlign: TextAlign.center,
@@ -222,18 +237,16 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
                         txt: Text(
-                          'Category 1',
+                          'Category 2',
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -250,16 +263,20 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
                         txt: Text(
                           'Category 1',
                           textAlign: TextAlign.center,
@@ -271,18 +288,16 @@ class _HomePageState extends State<HomePage> {
                       flex: 1,
                       child: CardWidget(
                         decoratn: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.red,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
                         ),
                         txt: Text(
-                          'Category 1',
+                          'Category 2',
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -290,6 +305,160 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
+              SizedBox(height: 15),
+              Container(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        txt: Text(
+                          'Category 2',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
+              Container(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        txt: Text(
+                          'Category 2',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
+              Container(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        txt: Text(
+                          'Category 2',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
 
               // ComplainCardWidget(
 
