@@ -68,8 +68,8 @@ class _SecondQuestionPageState extends State<SecondQuestionPage> {
               Text(
                 "2.	Is your matter pending/ decided by Banking Mohtasib of Pakistan? (Excluded in Case of MFBs)?",
                 style: TextStyle(
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
               // SizedBox(height: 24.0),

@@ -67,7 +67,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
               Text(
                 "1.	Have you approached your bank?",
                 style: TextStyle(
-                  fontSize: 22.0,
+                  fontSize: 20.0,
                   fontWeight: FontWeight.w500,
                 ),
               ),

@@ -76,34 +76,33 @@ class _HomeState extends State<Home>
             ),
             BottomNavigationBarItem(
               backgroundColor: Colors.blue,
-              icon: Stack(
-                children: [
-                  ImageIcon(
+              icon: new Stack(
+                children: <Widget>[
+                  // new Icon(Icons.notifications),
+                  new ImageIcon(
                     AssetImage('assets/list.png'),
                   ),
-                  Positioned(
-                    left: 7,
-                    bottom: 7,
-                    child: Stack(
-                      children: [
-                        Icon(
-                          Icons.circle,
-                          color: Colors.red,
-                          size: 18,
+                  new Positioned(
+                    right: 0,
+                    bottom: 11,
+                    child: new Container(
+                      padding: EdgeInsets.all(1),
+                      decoration: new BoxDecoration(
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      constraints: BoxConstraints(
+                        minWidth: 13,
+                        minHeight: 13,
+                      ),
+                      child: new Text(
+                        '12',
+                        style: new TextStyle(
+                          color: Colors.black,
+                          fontSize: 8,
                         ),
-                        Positioned(
-                          top: 3.0,
-                          bottom: 4.0,
-                          left: 8,
-                          child: Text(
-                            '2',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 09,
-                            ),
-                          ),
-                        )
-                      ],
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   )
                 ],
@@ -114,36 +113,35 @@ class _HomeState extends State<Home>
               // ),
               label: '_____',
             ),
+
             BottomNavigationBarItem(
               backgroundColor: Colors.blue,
-              icon: Stack(
-                children: [
-                  ImageIcon(
+              icon: new Stack(
+                children: <Widget>[
+                  new ImageIcon(
                     AssetImage('assets/mail.png'),
+                    // color: Colors.white,
                   ),
-                  Positioned(
-                    left: 7,
-                    bottom: 7,
-                    child: Stack(
-                      children: [
-                        Icon(
-                          Icons.circle,
-                          color: Colors.red,
-                          size: 18,
+                  new Positioned(
+                    right: 0,
+                    child: new Container(
+                      padding: EdgeInsets.all(1),
+                      decoration: new BoxDecoration(
+                        color: Colors.yellow,
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      constraints: BoxConstraints(
+                        minWidth: 13,
+                        minHeight: 13,
+                      ),
+                      child: new Text(
+                        '2',
+                        style: new TextStyle(
+                          color: Colors.black,
+                          fontSize: 8,
                         ),
-                        Positioned(
-                          top: 3.0,
-                          bottom: 4.0,
-                          left: 8,
-                          child: Text(
-                            '3',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 09,
-                            ),
-                          ),
-                        )
-                      ],
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   )
                 ],

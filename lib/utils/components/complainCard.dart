@@ -33,7 +33,7 @@ class ComplainCardWidget extends StatelessWidget {
         height: 133,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/search.png"), fit: BoxFit.fill),
+              image: AssetImage("assets/complain-card.png"), fit: BoxFit.fill),
         ),
         child: Column(
           children: [

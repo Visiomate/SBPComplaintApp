@@ -58,14 +58,14 @@ class _ThirdQuestPageState extends State<ThirdQuestPage> {
     return SingleChildScrollView(
       child: Container(
         child: Container(
-          padding: EdgeInsets.fromLTRB(20, 30, 10, 0),
+          padding: EdgeInsets.fromLTRB(10, 30, 10, 0),
           child: Column(
-            mainAxisSize: MainAxisSize.min, // To make the card compact
+            // To make the card compact
             children: <Widget>[
               Text(
-                '3.	Exclusion/agreement?',
+                '3.	Exclusion/agreement?                     ',
                 style: TextStyle(
-                  fontSize: 22.0,
+                  fontSize: 20.0,
                   fontWeight: FontWeight.w500,
                 ),
               ),
