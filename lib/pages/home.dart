@@ -58,12 +58,12 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        decoratn: new BoxDecoration(
-                          image: new DecorationImage(
-                            image: new AssetImage("assets/card.png"),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
                         txt: Text(
                           'Category 1',
                           textAlign: TextAlign.center,

@@ -37,52 +37,48 @@ class CardWidget extends StatelessWidget {
         //   ),
         // );
       },
-      child: Container(
-        height: 140,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15.0),
-          color: Colors.red,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset(0.0, 1.0), //(x,y)
-              blurRadius: 6.0,
-            ),
-          ],
-        ),
-        child: Column(
-          children: [
-            Container(
-              height: 100,
-              width: 170,
-              decoration: BoxDecoration(
+      child: Column(
+        children: [
+          Container(
+            height: 100,
+            width: 172,
+            decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/card.png"), fit: BoxFit.fill),
+                    image: AssetImage("assets/card2.png"), fit: BoxFit.fill),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(15),
+                  topLeft: Radius.circular(15),
+                )),
+          ),
+          // Image.asset(
+          //   "assets/card.png",
+          //   height: 100,
+          // ),
+          Container(
+            height: 40,
+            width: 172,
+            decoration: new BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(15),
+                bottomLeft: Radius.circular(15),
               ),
-            ),
-            // Image.asset(
-            //   "assets/card.png",
-            //   height: 100,
-            // ),
-            Container(
-              height: 40,
-              width: 172,
-              decoration: new BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(15),
-                    bottomLeft: Radius.circular(15),
-                  )
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  offset: Offset(0.0, 1.0), //(x,y)
+                  blurRadius: 6.0,
+                ),
+              ],
 
-                  // image: new DecorationImage(
-                  //   image: new AssetImage("assets/search.png"),
-                  //   fit: BoxFit.fill,
-                  // ),
-                  ),
-              child: Center(child: txt),
+              // image: new DecorationImage(
+              //   image: new AssetImage("assets/search.png"),
+              //   fit: BoxFit.fill,
+              // ),
             ),
-          ],
-        ),
+            child: Center(child: txt),
+          ),
+        ],
       ),
     );
   }
