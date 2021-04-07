@@ -1,7 +1,7 @@
 {
     "login": "Login",
     "signup": "Sign Up",
-    "firstName":"First Name",
+    "firstName":"Enter Complete Name",
     "lastName": "Last Name",
     "loginId": "Login ID",
     "password": " Password",

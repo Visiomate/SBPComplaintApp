@@ -58,33 +58,43 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        brdrRad: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
+                        decoratn: new BoxDecoration(
+                          image: new DecorationImage(
+                            image: new AssetImage("assets/card.png"),
+                            fit: BoxFit.fill,
+                          ),
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry1'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
+                    SizedBox(width: 10),
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry2'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: 15),
               Container(
                 padding: const EdgeInsets.only(bottom: 4),
                 child: Row(
@@ -92,34 +102,48 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry3'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
+                    SizedBox(width: 10),
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry4'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: 15),
               Container(
                 padding: const EdgeInsets.only(bottom: 4),
                 child: Row(
@@ -127,34 +151,48 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry5'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
+                    SizedBox(width: 10),
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry6'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: 15),
               Container(
                 padding: const EdgeInsets.only(bottom: 4),
                 child: Row(
@@ -162,34 +200,48 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry7'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
+                    SizedBox(width: 10),
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry8'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: 15),
               Container(
                 padding: const EdgeInsets.only(bottom: 4),
                 child: Row(
@@ -197,104 +249,48 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry9'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
+                    SizedBox(width: 10),
                     Expanded(
                       flex: 1,
                       child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
+                        decoratn: BoxDecoration(
                           borderRadius: BorderRadius.circular(15.0),
+                          color: Colors.red,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(0.0, 1.0), //(x,y)
+                              blurRadius: 6.0,
+                            ),
+                          ],
                         ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry10'),
-                          style: cardTextStyle,
+                        txt: Text(
+                          'Category 1',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.only(bottom: 4),
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry11'),
-                          style: cardTextStyle,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry12'),
-                          style: cardTextStyle,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(bottom: 4),
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: CardWidget(
-                        color: Color(0xff65c0ef),
-                        brdrRad: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry13'),
-                          style: cardTextStyle,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: CardWidget(
-                        color: Colors.blue,
-                        brdrRad: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        subtitles: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('categry14'),
-                          style: cardTextStyle,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+
               // ComplainCardWidget(
 
               // titles: Text('Back staff  Not Helping'),

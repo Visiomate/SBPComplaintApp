@@ -76,18 +76,82 @@ class _HomeState extends State<Home>
             ),
             BottomNavigationBarItem(
               backgroundColor: Colors.blue,
-              icon: ImageIcon(
-                AssetImage('assets/list.png'),
-                // color: Colors.white,
+              icon: Stack(
+                children: [
+                  ImageIcon(
+                    AssetImage('assets/list.png'),
+                  ),
+                  Positioned(
+                    left: 7,
+                    bottom: 7,
+                    child: Stack(
+                      children: [
+                        Icon(
+                          Icons.circle,
+                          color: Colors.red,
+                          size: 18,
+                        ),
+                        Positioned(
+                          top: 3.0,
+                          bottom: 4.0,
+                          left: 8,
+                          child: Text(
+                            '2',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 09,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
+              // icon: ImageIcon(
+              //   AssetImage('assets/list.png'),
+              //   // color: Colors.white,
+              // ),
               label: '_____',
             ),
             BottomNavigationBarItem(
               backgroundColor: Colors.blue,
-              icon: ImageIcon(
-                AssetImage('assets/mail.png'),
-                // color: Colors.white,
+              icon: Stack(
+                children: [
+                  ImageIcon(
+                    AssetImage('assets/mail.png'),
+                  ),
+                  Positioned(
+                    left: 7,
+                    bottom: 7,
+                    child: Stack(
+                      children: [
+                        Icon(
+                          Icons.circle,
+                          color: Colors.red,
+                          size: 18,
+                        ),
+                        Positioned(
+                          top: 3.0,
+                          bottom: 4.0,
+                          left: 8,
+                          child: Text(
+                            '3',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 09,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
+              // icon: ImageIcon(
+              //   AssetImage('assets/mail.png'),
+              //   // color: Colors.white,
+              // ),
               label: '_____',
             ),
             BottomNavigationBarItem(

@@ -48,52 +48,90 @@ class _LoginScreenState extends State<LoginScreen> {
                       fit: BoxFit.fill),
                 ),
               ),
+              SizedBox(
+                height: 80,
+              ),
               Row(
                 children: [
                   // Text('Please Select language'),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(80, 0, 70, 0),
-                    child: Center(
-                      child: DropdownButton<Language>(
-                        iconSize: 30,
-                        hint: Text(
-                          DemoLocalization.of(context)
-                              .getTranslatedValue('langname'),
-                        ),
-                        onChanged: (Language language) {
-                          _changeLanguage(language);
-                        },
-                        // underline: SizedBox(),
-                        // icon: Icon(
-                        //   Icons.language,
-                        //   color: Colors.green,
-                        // ),
-                        items: Language.languageList()
-                            .map<DropdownMenuItem<Language>>(
-                                (lang) => DropdownMenuItem(
-                                      value: lang,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
-                                        children: <Widget>[
-                                          Text(
-                                            lang.flag,
-                                          ),
-                                          Text(
-                                            lang.name,
-                                            style: TextStyle(fontSize: 30),
-                                          )
-                                        ],
+
+                  Directionality(
+                    textDirection: TextDirection.ltr,
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: Container(
+                        child: DecoratedBox(
+                          decoration: ShapeDecoration(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                  width: 1.0,
+                                  style: BorderStyle.solid,
+                                  color: Colors.grey),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15.0)),
+                            ),
+                          ),
+                          child: SizedBox(
+                            height: 40,
+                            width: 260,
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(30, 0, 15, 0),
+                              child: Directionality(
+                                textDirection: TextDirection.ltr,
+                                child: Center(
+                                  child: DropdownButtonHideUnderline(
+                                    child: DropdownButton<Language>(
+                                      isExpanded: true,
+                                      isDense: true,
+                                      iconSize: 30,
+                                      hint: Text(
+                                        DemoLocalization.of(context)
+                                            .getTranslatedValue('langname'),
                                       ),
-                                    ))
-                            .toList(),
+                                      onChanged: (Language language) {
+                                        _changeLanguage(language);
+                                      },
+
+                                      underline: SizedBox(),
+                                      // icon: Icon(
+                                      //   Icons.language,
+                                      //   color: Colors.green,
+                                      // ),
+                                      items: Language.languageList()
+                                          .map<DropdownMenuItem<Language>>(
+                                              (lang) => DropdownMenuItem(
+                                                    value: lang,
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceAround,
+                                                      children: <Widget>[
+                                                        Text(
+                                                          lang.flag,
+                                                        ),
+                                                        Text(
+                                                          lang.name,
+                                                          style: TextStyle(
+                                                              fontSize: 30),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ))
+                                          .toList(),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

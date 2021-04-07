@@ -41,7 +41,7 @@ class _SignUpPageState extends State<SignUpPage> {
       // resizeToAvoidBottomInset: true,
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(top: 20, bottom: 110),
+          padding: EdgeInsets.only(top: 50, bottom: 60),
           color: Color.fromRGBO(0, 115, 50, 1),
           child: Container(
             margin: const EdgeInsets.only(right: 50, left: 50),
@@ -58,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         fit: BoxFit.fill),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 60),
                 Container(
                   child: Form(
                     key: _popUpFormKey,
@@ -80,30 +80,47 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         SizedBox(height: 10),
                         CustomTextField(
-                          controller: _lastNameController,
+                          keybrdtype: TextInputType.number,
+                          controller: _mobileController,
                           hintText: DemoLocalization.of(context)
-                              .getTranslatedValue('lastName'),
+                              .getTranslatedValue('mobileNum'),
                           validator: (value) {
                             if (value.isEmpty) {
                               return 'This field is required';
                             }
-                            if (value.length < 3) {
-                              return 'please enter valid name';
+                            if (value.length != 11) {
+                              return 'Invalid contact number';
                             }
                             return null;
                           },
                         ),
                         SizedBox(height: 10),
                         CustomTextField(
-                          controller: _loginIdController,
+                          controller: _emailController,
                           hintText: DemoLocalization.of(context)
-                              .getTranslatedValue('loginId'),
+                              .getTranslatedValue('email'),
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'This is required';
+                            }
+                            if (!EmailValidator.validate(value)) {
+                              return 'Please enter a valid email';
+                            }
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: 10),
+                        CustomTextField(
+                          keybrdtype: TextInputType.number,
+                          controller: _cnicController,
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('cnic'),
                           validator: (value) {
                             if (value.isEmpty) {
                               return 'This field is required';
                             }
-                            if (value.length < 2) {
-                              return 'Please Enter valid ID';
+                            if (value.length != 13) {
+                              return 'Invalid Cnic number';
                             }
                             return null;
                           },
@@ -147,53 +164,6 @@ class _SignUpPageState extends State<SignUpPage> {
                           },
                           // onchng: (value) =>
                           //     _reEnterPasswordController.text = value,
-                        ),
-                        SizedBox(height: 10),
-                        CustomTextField(
-                          keybrdtype: TextInputType.number,
-                          controller: _cnicController,
-                          hintText: DemoLocalization.of(context)
-                              .getTranslatedValue('cnic'),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'This field is required';
-                            }
-                            if (value.length != 13) {
-                              return 'Invalid Cnic number';
-                            }
-                            return null;
-                          },
-                        ),
-                        SizedBox(height: 10),
-                        CustomTextField(
-                          keybrdtype: TextInputType.number,
-                          controller: _mobileController,
-                          hintText: DemoLocalization.of(context)
-                              .getTranslatedValue('mobileNum'),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'This field is required';
-                            }
-                            if (value.length != 11) {
-                              return 'Invalid contact number';
-                            }
-                            return null;
-                          },
-                        ),
-                        SizedBox(height: 10),
-                        CustomTextField(
-                          controller: _emailController,
-                          hintText: DemoLocalization.of(context)
-                              .getTranslatedValue('email'),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'This is required';
-                            }
-                            if (!EmailValidator.validate(value)) {
-                              return 'Please enter a valid email';
-                            }
-                            return null;
-                          },
                         ),
                         SizedBox(height: 20),
                         Row(

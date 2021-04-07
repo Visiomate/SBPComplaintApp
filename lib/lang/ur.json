@@ -4,13 +4,13 @@
 
     
 
-    "firstName":"پہلا نام",
+    "firstName":"مکمل نام درج کریں",
     "lastName": "آخری نام",
     "loginId": "لاگ ان ID",
     "password": "پاس ورڈ",
     "reEnterPass": "پاس ورڈ دوبارہ درج",
     "cnic": "شناختی کارڈ ",
-    "mobileNum": "موبائل فون ",
+    "mobileNum": " موبائل نمبر / صارف-شناخت",
     "email": "ای میل",
 
     "otpsend": "ہم نے آپ کو آپ پر OTP بھیج دیا ہے",
