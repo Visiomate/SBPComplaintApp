@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/complaint_detail.dart';
+import 'package:sbp_complaints_management/pages/notification_page.dart';
 
 class ComplainCardWidget extends StatelessWidget {
   final Widget titles;
@@ -22,11 +23,11 @@ class ComplainCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => ComplaintDetail(),
-          ),
-        );
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => ComplaintDetail(),
+        //   ),
+        // );
       },
       child: Container(
         padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
@@ -59,12 +60,11 @@ class ComplainCardWidget extends StatelessWidget {
                     alignment: AlignmentDirectional.topEnd,
                     child: GestureDetector(
                       onTap: () {
-                        // Navigator.of(context).push(
-                        //   MaterialPageRoute(
-                        //     builder: (context) => ComplaintDetail(),
-                        //   ),
-                        // );
-                        //
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => ComplaintDetail(),
+                          ),
+                        );
                       },
                       child: Image.asset(
                         'assets/list2.png',
@@ -117,11 +117,11 @@ class ComplainCardWidget extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(191, 0, 0, 0),
                       child: GestureDetector(
                         onTap: () {
-                          // Navigator.of(context).push(
-                          //   MaterialPageRoute(
-                          //     builder: (context) => ComplaintDetail(),
-                          //   ),
-                          // );
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => NotificationPge(),
+                            ),
+                          );
                         },
                         child: Image.asset(
                           'assets/mail2.png',

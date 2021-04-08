@@ -51,6 +51,10 @@ class _FirstQuestionState extends State<FirstQuestion> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Questions'),
+        leading: IconButton(
+          icon: Icon(Icons.chevron_left_sharp),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: dialogContent(context),
     );
@@ -65,7 +69,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
             mainAxisSize: MainAxisSize.min, // To make the card compact
             children: <Widget>[
               Text(
-                "1.	Have you approached your bank?",
+                DemoLocalization.of(context).getTranslatedValue('que1'),
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.w500,
@@ -106,7 +110,9 @@ class _FirstQuestionState extends State<FirstQuestion> {
 
               RadioListTile(
                 groupValue: selectedRadioTile,
-                title: Text('No'),
+                title: Text(
+                  DemoLocalization.of(context).getTranslatedValue('no'),
+                ),
                 value: 1,
                 onChanged: (val) {
                   hideWidget(val);
@@ -115,7 +121,9 @@ class _FirstQuestionState extends State<FirstQuestion> {
 
               RadioListTile(
                 groupValue: selectedRadioTile,
-                title: Text('yes'),
+                title: Text(
+                  DemoLocalization.of(context).getTranslatedValue('yes'),
+                ),
                 value: 2,
                 onChanged: (val) {
                   showWidget(val);
@@ -143,18 +151,18 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                   Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text(
-                                          'Provide complain number & complaint Date'),
+                                      Text(DemoLocalization.of(context)
+                                          .getTranslatedValue('proComplainNo')),
                                       SizedBox(
                                         height: 10,
                                       ),
                                       CustomTextField(
                                         controller: emailInputController,
                                         hintText: DemoLocalization.of(context)
-                                            .getTranslatedValue('email'),
+                                            .getTranslatedValue('coplainNo'),
                                         validator: (value) {
                                           if (value.isEmpty) {
-                                            return 'Email is required';
+                                            return 'Complaint No is required';
                                           }
                                           // if (!EmailValidator.validate(value)) {
                                           //   return 'Please enter a valid email';
@@ -165,10 +173,11 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                       SizedBox(height: 10),
                                       CustomTextField(
                                         controller: passwordInputController,
-                                        hintText: '***********',
+                                        hintText: DemoLocalization.of(context)
+                                            .getTranslatedValue('complainDate'),
                                         validator: (value) {
                                           if (value.isEmpty) {
-                                            return 'Password is required';
+                                            return 'Complaint Date is required';
                                           }
                                           return null;
                                         },
@@ -190,7 +199,10 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                                                   (context) =>
                                                                       Home()));
                                                 },
-                                                text: 'Cancel',
+                                                text:
+                                                    DemoLocalization.of(context)
+                                                        .getTranslatedValue(
+                                                            'cancel'),
                                                 //  DemoLocalization.of(context)
                                                 //     .getTranslatedValue('signup'),
                                                 color: Color.fromRGBO(
@@ -205,13 +217,14 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                                   left: 8.0, right: 8.0),
                                               child: Button(
                                                 onPress: () {
-                                                  Navigator.of(context)
-                                                      .pushReplacement(
-                                                          MaterialPageRoute(
-                                                              builder: (context) =>
-                                                                  SecondQuestionPage()));
+                                                  Navigator.of(context).push(
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              SecondQuestionPage()));
                                                 },
-                                                text: 'Next',
+                                                text: DemoLocalization.of(
+                                                        context)
+                                                    .getTranslatedValue('next'),
                                                 //  DemoLocalization.of(context)
                                                 //     .getTranslatedValue('signup'),
                                                 color: Color.fromRGBO(
@@ -249,7 +262,8 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        'i.	Please approach your concerned bank at 021-XXX-XXX-XXX or email them at xyz@abc.com. You can also write to them at XYZ bank limited, x floor, x building, x road, Karachi. As per Consumer Grievance Handling Mechanism (CGHM) issued by SBP under BC&CPD Circular No. 1 of 2016, banks are required to resolve complaints of the customers within given timeline, being the first forum of redressal of complaints. Please obtain complaint number and turn around time from the bank for resolution of the matter.',
+                                        DemoLocalization.of(context)
+                                            .getTranslatedValue('que1No'),
                                         style: TextStyle(
                                             color: Colors.black, fontSize: 12),
                                       ),
@@ -291,7 +305,8 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                             );
                                             // }
                                           },
-                                          text: ('Back To Dashboard'),
+                                          text: (DemoLocalization.of(context)
+                                              .getTranslatedValue('backDash')),
                                           // DemoLocalization.of(context)
                                           //     .getTranslatedValue('login'),
                                           color: Color.fromRGBO(11, 175, 89, 1),

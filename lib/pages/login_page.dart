@@ -142,9 +142,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 const EdgeInsets.only(left: 8.0, right: 8.0),
                             child: Button(
                               onPress: () {
-                                Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                        builder: (context) => SignInPage()));
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => SignInPage()));
                               },
                               text: DemoLocalization.of(context)
                                   .getTranslatedValue('login'),
@@ -165,9 +164,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                       child: Button(
                         onPress: () {
-                          Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (context) => SignUpPage()));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SignUpPage()));
                         },
                         text: DemoLocalization.of(context)
                             .getTranslatedValue('signup'),

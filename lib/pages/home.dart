@@ -74,7 +74,8 @@ class _HomePageState extends State<HomePage> {
                         //   ),
                         // ),
                         txt: Text(
-                          'Category 1',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry1'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -93,7 +94,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         txt: Text(
-                          'Category 2',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry2'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -125,7 +127,8 @@ class _HomePageState extends State<HomePage> {
                         //   ),
                         // ),
                         txt: Text(
-                          'Category 1',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry3'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -144,7 +147,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         txt: Text(
-                          'Category 2',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry4'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -176,7 +180,8 @@ class _HomePageState extends State<HomePage> {
                         //   ),
                         // ),
                         txt: Text(
-                          'Category 1',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry5'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -195,7 +200,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         txt: Text(
-                          'Category 2',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry6'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -227,7 +233,8 @@ class _HomePageState extends State<HomePage> {
                         //   ),
                         // ),
                         txt: Text(
-                          'Category 1',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry7'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -246,7 +253,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         txt: Text(
-                          'Category 2',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry8'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -278,7 +286,8 @@ class _HomePageState extends State<HomePage> {
                         //   ),
                         // ),
                         txt: Text(
-                          'Category 1',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry9'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -297,7 +306,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         txt: Text(
-                          'Category 2',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry10'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -329,7 +339,8 @@ class _HomePageState extends State<HomePage> {
                         //   ),
                         // ),
                         txt: Text(
-                          'Category 1',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry11'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -348,7 +359,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         txt: Text(
-                          'Category 2',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry12'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -380,7 +392,8 @@ class _HomePageState extends State<HomePage> {
                         //   ),
                         // ),
                         txt: Text(
-                          'Category 1',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry13'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -399,7 +412,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         txt: Text(
-                          'Category 2',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry14'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -431,7 +445,8 @@ class _HomePageState extends State<HomePage> {
                         //   ),
                         // ),
                         txt: Text(
-                          'Category 1',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry15'),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -450,7 +465,167 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         txt: Text(
-                          'Category 2',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry16'),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
+              Container(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
+                        txt: Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry17'),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        txt: Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry18'),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
+              Container(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
+                        txt: Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry19'),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        txt: Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry20'),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
+              Container(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        // decoratn: new BoxDecoration(
+                        //   image: new DecorationImage(
+                        //     image: new AssetImage("assets/card.png"),
+                        //     fit: BoxFit.fill,
+                        //   ),
+                        // ),
+                        txt: Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry21'),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      flex: 1,
+                      child: CardWidget(
+                        decoratn: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage("assets/mony1.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                          ),
+                        ),
+                        txt: Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('categry22'),
                           textAlign: TextAlign.center,
                         ),
                       ),

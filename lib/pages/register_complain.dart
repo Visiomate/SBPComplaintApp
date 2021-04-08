@@ -488,106 +488,46 @@ class _RegisterComplainState extends State<RegisterComplain> {
   // }
 
   Widget _bigForm() {
-    return Form(
-      key: _popUpFormKey,
-      child: Column(
-        children: [
-          Container(
-            child: Padding(
-              padding: EdgeInsets.all(0),
-              child: Column(
-                children: [
-                  SizedBox(height: 5),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: Row(
-                      children: [
-                        Text(
-                          'Complaint Info',
-                          style: TextStyle(
-                              color: Color.fromRGBO(0, 115, 50, 1),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w800),
-                        ),
-                      ],
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Form(
+        key: _popUpFormKey,
+        child: Column(
+          children: [
+            Container(
+              child: Padding(
+                padding: EdgeInsets.all(0),
+                child: Column(
+                  children: [
+                    SizedBox(height: 5),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: Row(
+                        children: [
+                          Text(
+                            DemoLocalization.of(context)
+                                .getTranslatedValue('complantInfo'),
+                            style: TextStyle(
+                                color: Color.fromRGBO(0, 115, 50, 1),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w800),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 5),
-                  Row(
-                    children: [
-                      Container(
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 0, 45, 0),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    DemoLocalization.of(context)
-                                        .getTranslatedValue('cnic'),
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.green),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  '422013905562',
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(width: 90),
-                      Container(
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 0, 73, 0),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    DemoLocalization.of(context)
-                                        .getTranslatedValue('name'),
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.green),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  'Muhammad Abdullah',
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    children: [
-                      Container(
-                        child: Align(
-                          alignment: Alignment.centerLeft,
+                    SizedBox(height: 5),
+                    Row(
+                      children: [
+                        Container(
                           child: Column(
                             children: [
                               Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
+                                padding: EdgeInsets.fromLTRB(0, 0, 45, 0),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Text(
                                       DemoLocalization.of(context)
-                                          .getTranslatedValue('mobileNum'),
+                                          .getTranslatedValue('cnic'),
                                       style: TextStyle(
                                           fontSize: 16, color: Colors.green),
                                     ),
@@ -595,10 +535,9 @@ class _RegisterComplainState extends State<RegisterComplain> {
                                 ),
                               ),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    '09007860212',
+                                    '422013905562',
                                     style: TextStyle(fontSize: 12),
                                   ),
                                 ],
@@ -606,788 +545,874 @@ class _RegisterComplainState extends State<RegisterComplain> {
                             ],
                           ),
                         ),
-                      ),
-                      SizedBox(width: 90),
-                      Container(
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 0, 75, 0),
-                              child: Row(
+                        SizedBox(width: 90),
+                        Container(
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 73, 0),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      DemoLocalization.of(context)
+                                          .getTranslatedValue('name'),
+                                      style: TextStyle(
+                                          fontSize: 16, color: Colors.green),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Row(
                                 children: [
                                   Text(
-                                    DemoLocalization.of(context)
-                                        .getTranslatedValue('email'),
-                                    style: TextStyle(
-                                        fontSize: 16, color: Colors.green),
+                                    'Muhammad Abdullah',
+                                    style: TextStyle(fontSize: 12),
                                   ),
                                 ],
                               ),
-                            ),
-                            Row(
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Container(
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Column(
                               children: [
-                                Text(
-                                  'Abdullah@gmail.com',
-                                  style: TextStyle(fontSize: 12),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        DemoLocalization.of(context)
+                                            .getTranslatedValue('mobileNum'),
+                                        style: TextStyle(
+                                            fontSize: 16, color: Colors.green),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      '09007860212',
+                                      style: TextStyle(fontSize: 12),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-            child: Column(
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 10),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          left: 0, right: 0, bottom: 0, top: 0),
-                      child: Container(
-                        height: 55, //gives the height of the dropdown button
-                        width: MediaQuery.of(context)
-                            .size
-                            .width, //gives the width of the dropdown button
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                          // color: Color(0xFFF2F2F2)
-                        ),
-
-                        child: Theme(
-                          data: Theme.of(context).copyWith(
-                              canvasColor: Colors
-                                  .white, // background color for the dropdown items
-                              buttonTheme: ButtonTheme.of(context).copyWith(
-                                alignedDropdown:
-                                    true, //If false (the default), then the dropdown's menu will be wider than its button.
-                              )),
-                          child: DropdownButtonFormField<String>(
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(0.0),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey),
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
-                            items: _possibleCountyrName
-                                .map((String dropDownStringItem) {
-                              return DropdownMenuItem<String>(
-                                value: dropDownStringItem,
-                                child: Text(dropDownStringItem),
-                              );
-                            }).toList(),
-                            hint: Text('Country Name'
-                                // DemoLocalization.of(context)
-                                //     .getTranslatedValue('bankName'),
-                                ),
-                            onChanged: (String newValueSelected) {
-                              setState(() {
-                                this._countryName = newValueSelected;
-                              });
-                            },
-                            value: _countryName,
-                            validator: (_countryName) => _countryName == null
-                                ? 'Please select Bank'
-                                : null,
                           ),
                         ),
-                      ),
-                    ),
-                    SizedBox(height: 0),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          left: 0, right: 0, bottom: 0, top: 0),
-                      child: Container(
-                        height: 55, //gives the height of the dropdown button
-                        width: MediaQuery.of(context)
-                            .size
-                            .width, //gives the width of the dropdown button
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                          // color: Color(0xFFF2F2F2)
-                        ),
-                        child: Theme(
-                          data: Theme.of(context).copyWith(
-                              canvasColor: Colors
-                                  .white, // background color for the dropdown items
-                              buttonTheme: ButtonTheme.of(context).copyWith(
-                                alignedDropdown:
-                                    true, //If false (the default), then the dropdown's menu will be wider than its button.
-                              )),
-                          child: DropdownButtonFormField<String>(
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(0.0),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey),
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
-                            items: _possibleCityTehsilName
-                                .map((String dropDownStringItem) {
-                              return DropdownMenuItem<String>(
-                                value: dropDownStringItem,
-                                child: Text(dropDownStringItem),
-                              );
-                            }).toList(),
-                            hint: Text('City/Tehsil'
-                                // DemoLocalization.of(context)
-                                //     .getTranslatedValue('bankcity'),
+                        SizedBox(width: 90),
+                        Container(
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 75, 0),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      DemoLocalization.of(context)
+                                          .getTranslatedValue('email'),
+                                      style: TextStyle(
+                                          fontSize: 16, color: Colors.green),
+                                    ),
+                                  ],
                                 ),
-                            onChanged: (String newValueSelected) {
-                              setState(() {
-                                this._cityTehsilName = newValueSelected;
-                              });
-                            },
-                            value: _cityTehsilName,
-                            validator: (_cityTehsilName) =>
-                                _cityTehsilName == null
-                                    ? 'Please select Bank'
-                                    : null,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    'Abdullah@gmail.com',
+                                    style: TextStyle(fontSize: 12),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                    SizedBox(height: 0),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          left: 0, right: 0, bottom: 0, top: 0),
-                      child: Container(
-                        height: 55, //gives the height of the dropdown button
-                        width: MediaQuery.of(context)
-                            .size
-                            .width, //gives the width of the dropdown button
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(13)),
-                          // color: Color(0xFFF2F2F2)
-                        ),
-                        child: Theme(
-                          data: Theme.of(context).copyWith(
-                              canvasColor: Colors
-                                  .white, // background color for the dropdown items
-                              buttonTheme: ButtonTheme.of(context).copyWith(
-                                alignedDropdown:
-                                    true, //If false (the default), then the dropdown's menu will be wider than its button.
-                              )),
-                          child: DropdownButtonFormField<String>(
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(0.0),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey),
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
-                            items: _possibleProvincelName
-                                .map((String dropDownStringItem) {
-                              return DropdownMenuItem<String>(
-                                value: dropDownStringItem,
-                                child: Text(dropDownStringItem),
-                              );
-                            }).toList(),
-                            hint: Text('Province'
-                                // DemoLocalization.of(context)
-                                //     .getTranslatedValue('branchCity'),
-                                ),
-                            onChanged: (String newValueSelected) {
-                              setState(() {
-                                this._provincelName = newValueSelected;
-                              });
-                            },
-                            value: _provincelName,
-                            validator: (_provincelName) =>
-                                _provincelName == null
-                                    ? 'Please select Bank'
-                                    : null,
-                          ),
-                        ),
-                      ),
-                    ),
-                    _buildAddressTextField(),
                   ],
                 ),
-              ],
+              ),
             ),
-          ),
-          SizedBox(height: 10),
-          Container(
-            padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-            child: Row(
-              children: [
-                Text(
-                  DemoLocalization.of(context).getTranslatedValue('bankDet'),
-                  style: TextStyle(
-                      color: Color.fromRGBO(0, 115, 50, 1),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 5),
-          Container(
-            padding: EdgeInsets.all(0),
-            // color: Color.fromRGBO(0, 115, 50, 1),
-            child: Container(
+            Container(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: Column(
                 children: <Widget>[
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0, right: 0, bottom: 0, top: 0),
-                        child: Container(
-                          height: 55, //gives the height of the dropdown button
-                          width: MediaQuery.of(context)
-                              .size
-                              .width, //gives the width of the dropdown button
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(13)),
-                            // color: Color(0xFFF2F2F2)
-                          ),
-                          child: Theme(
-                            data: Theme.of(context).copyWith(
-                                canvasColor: Colors
-                                    .white, // background color for the dropdown items
-                                buttonTheme: ButtonTheme.of(context).copyWith(
-                                  alignedDropdown:
-                                      true, //If false (the default), then the dropdown's menu will be wider than its button.
-                                )),
-                            child: DropdownButtonFormField<String>(
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.all(0.0),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.grey),
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                              ),
-                              items: _possiblecomplainAgainst
-                                  .map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              hint: Text('Complain Against'),
-                              onChanged: (String newValueSelected) {
-                                setState(() {
-                                  this._complainAgainst = newValueSelected;
-                                });
-                              },
-                              value: _complainAgainst,
-                              validator: (_complainAgainst) =>
-                                  _complainAgainst == null
-                                      ? 'Please select Bank'
-                                      : null,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0, right: 0, bottom: 0, top: 0),
-                        child: Container(
-                          height: 55, //gives the height of the dropdown button
-                          width: MediaQuery.of(context)
-                              .size
-                              .width, //gives the width of the dropdown button
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(13)),
-                            // color: Color(0xFFF2F2F2)
-                          ),
-                          child: Theme(
-                            data: Theme.of(context).copyWith(
-                                canvasColor: Colors
-                                    .white, // background color for the dropdown items
-                                buttonTheme: ButtonTheme.of(context).copyWith(
-                                  alignedDropdown:
-                                      true, //If false (the default), then the dropdown's menu will be wider than its button.
-                                )),
-                            child: DropdownButtonFormField<String>(
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.all(0.0),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.grey),
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                              ),
-                              items: _possibleBankName
-                                  .map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              hint: Text(
-                                DemoLocalization.of(context)
-                                    .getTranslatedValue('bankName'),
-                              ),
-                              onChanged: (String newValueSelected) {
-                                setState(() {
-                                  this._bankNameSelected = newValueSelected;
-                                });
-                              },
-                              value: _bankNameSelected,
-                              validator: (_bankNameSelected) =>
-                                  _bankNameSelected == null
-                                      ? 'Please select Bank'
-                                      : null,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0, right: 0, bottom: 0, top: 0),
-                        child: Container(
-                          height: 55, //gives the height of the dropdown button
-                          width: MediaQuery.of(context)
-                              .size
-                              .width, //gives the width of the dropdown button
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(13)),
-                            // color: Color(0xFFF2F2F2)
-                          ),
-                          child: Theme(
-                            data: Theme.of(context).copyWith(
-                                canvasColor: Colors
-                                    .white, // background color for the dropdown items
-                                buttonTheme: ButtonTheme.of(context).copyWith(
-                                  alignedDropdown:
-                                      true, //If false (the default), then the dropdown's menu will be wider than its button.
-                                )),
-                            child: DropdownButtonFormField<String>(
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.all(0.0),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.grey),
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                              ),
-                              items: _possibleProvincelName
-                                  .map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              hint: Text('Bank Province'
-                                  // DemoLocalization.of(context)
-                                  //     .getTranslatedValue('branchCity'),
-                                  ),
-                              onChanged: (String newValueSelected) {
-                                setState(() {
-                                  this._provincelName = newValueSelected;
-                                });
-                              },
-                              value: _provincelName,
-                              validator: (_provincelName) =>
-                                  _provincelName == null
-                                      ? 'Please select Bank'
-                                      : null,
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 0),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0, right: 0, bottom: 0, top: 0),
-                        child: Container(
-                          height: 55, //gives the height of the dropdown button
-                          width: MediaQuery.of(context)
-                              .size
-                              .width, //gives the width of the dropdown button
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(13)),
-                            // color: Color(0xFFF2F2F2)
-                          ),
-                          child: Theme(
-                            data: Theme.of(context).copyWith(
-                                canvasColor: Colors
-                                    .white, // background color for the dropdown items
-                                buttonTheme: ButtonTheme.of(context).copyWith(
-                                  alignedDropdown:
-                                      true, //If false (the default), then the dropdown's menu will be wider than its button.
-                                )),
-                            child: DropdownButtonFormField<String>(
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.all(0.0),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.grey),
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                              ),
-                              items: _possibleBankCity
-                                  .map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              hint: Text(
-                                DemoLocalization.of(context)
-                                    .getTranslatedValue('bankcity'),
-                              ),
-                              onChanged: (String newValueSelected) {
-                                setState(() {
-                                  this._bankNameCity = newValueSelected;
-                                });
-                              },
-                              value: _bankNameCity,
-                              validator: (_bankNameCity) =>
-                                  _bankNameCity == null
-                                      ? 'Please select Bank'
-                                      : null,
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 0),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0, right: 0, bottom: 0, top: 0),
-                        child: Container(
-                          height: 55, //gives the height of the dropdown button
-                          width: MediaQuery.of(context)
-                              .size
-                              .width, //gives the width of the dropdown button
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(13)),
-                            // color: Color(0xFFF2F2F2)
-                          ),
-                          child: Theme(
-                            data: Theme.of(context).copyWith(
-                                canvasColor: Colors
-                                    .white, // background color for the dropdown items
-                                buttonTheme: ButtonTheme.of(context).copyWith(
-                                  alignedDropdown:
-                                      true, //If false (the default), then the dropdown's menu will be wider than its button.
-                                )),
-                            child: DropdownButtonFormField<String>(
-                              decoration: InputDecoration(
-                                contentPadding: EdgeInsets.all(0.0),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.grey),
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                              ),
-                              items: _bankbranchName
-                                  .map((String dropDownStringItem) {
-                                return DropdownMenuItem<String>(
-                                  value: dropDownStringItem,
-                                  child: Text(dropDownStringItem),
-                                );
-                              }).toList(),
-                              hint: Text(
-                                DemoLocalization.of(context)
-                                    .getTranslatedValue('branchCity'),
-                              ),
-                              onChanged: (String newValueSelected) {
-                                setState(() {
-                                  this._branchName = newValueSelected;
-                                });
-                              },
-                              value: _branchName,
-                              validator: (_bankNameSelected) =>
-                                  _branchName == null
-                                      ? 'Please select Bank'
-                                      : null,
-                            ),
-                          ),
-                        ),
-                      ),
-                      _buildOtherBrancInfoTextField(),
                       SizedBox(height: 10),
-                      Container(
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  DemoLocalization.of(context)
-                                      .getTranslatedValue('complaintDeta'),
-                                  style: TextStyle(
-                                      color: Color.fromRGBO(0, 115, 50, 1),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w800),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 5),
-                            // Row(
-                            //   children: [
-                            //     Text(
-                            //         DemoLocalization.of(context)
-                            //             .getTranslatedValue('complainCategry'),
-                            //         style: TextStyle(
-                            //             fontSize: 12,
-                            //             fontWeight: FontWeight.w500)),
-                            //     Text(
-                            //         DemoLocalization.of(context)
-                            //             .getTranslatedValue('complaintName'),
-                            //         style: TextStyle(fontSize: 12)),
-                            //   ],
-                            // ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 0, right: 0, bottom: 0, top: 0),
-                              child: Container(
-                                height:
-                                    55, //gives the height of the dropdown button
-                                width: MediaQuery.of(context)
-                                    .size
-                                    .width, //gives the width of the dropdown button
-                                decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(13)),
-                                  // color: Color(0xFFF2F2F2)
-                                ),
-                                child: Theme(
-                                  data: Theme.of(context).copyWith(
-                                      canvasColor: Colors
-                                          .white, // background color for the dropdown items
-                                      buttonTheme:
-                                          ButtonTheme.of(context).copyWith(
-                                        alignedDropdown:
-                                            true, //If false (the default), then the dropdown's menu will be wider than its button.
-                                      )),
-                                  child: DropdownButtonFormField<String>(
-                                    decoration: InputDecoration(
-                                      contentPadding: EdgeInsets.all(0.0),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide:
-                                            BorderSide(color: Colors.grey),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                    ),
-                                    items: _possiblecomplainCategory
-                                        .map((String dropDownStringItem) {
-                                      return DropdownMenuItem<String>(
-                                        value: dropDownStringItem,
-                                        child: Text(dropDownStringItem),
-                                      );
-                                    }).toList(),
-                                    hint: Text('Compaint Category'
-                                        // DemoLocalization.of(context)
-                                        //     .getTranslatedValue('branchCity'),
-                                        ),
-                                    onChanged: (String newValueSelected) {
-                                      setState(() {
-                                        this._complainCategory =
-                                            newValueSelected;
-                                      });
-                                    },
-                                    value: _complainCategory,
-                                    validator: (_complainCategory) =>
-                                        _complainCategory == null
-                                            ? 'Please select Bank'
-                                            : null,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 0, right: 0, bottom: 0, top: 0),
-                              child: Container(
-                                height:
-                                    55, //gives the height of the dropdown button
-                                width: MediaQuery.of(context)
-                                    .size
-                                    .width, //gives the width of the dropdown button
-                                decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(13)),
-                                  // color: Color(0xFFF2F2F2)
-                                ),
-                                child: Theme(
-                                  data: Theme.of(context).copyWith(
-                                      canvasColor: Colors
-                                          .white, // background color for the dropdown items
-                                      buttonTheme:
-                                          ButtonTheme.of(context).copyWith(
-                                        alignedDropdown:
-                                            true, //If false (the default), then the dropdown's menu will be wider than its button.
-                                      )),
-                                  child: DropdownButtonFormField<String>(
-                                    decoration: InputDecoration(
-                                      contentPadding: EdgeInsets.all(0.0),
-                                      enabledBorder: OutlineInputBorder(
-                                        borderSide:
-                                            BorderSide(color: Colors.grey),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                    ),
-                                    items: _possiblesubcomplainCategory
-                                        .map((String dropDownStringItem) {
-                                      return DropdownMenuItem<String>(
-                                        value: dropDownStringItem,
-                                        child: Text(dropDownStringItem),
-                                      );
-                                    }).toList(),
-                                    hint: Text('Complaint Sub Category'
-                                        // DemoLocalization.of(context)
-                                        //     .getTranslatedValue('branchCity'),
-                                        ),
-                                    onChanged: (String newValueSelected) {
-                                      setState(() {
-                                        this._subcomplainCategory =
-                                            newValueSelected;
-                                      });
-                                    },
-                                    value: _subcomplainCategory,
-                                    validator: (_subcomplainCategory) =>
-                                        _subcomplainCategory == null
-                                            ? 'Please select Bank'
-                                            : null,
-                                  ),
-                                ),
-                              ),
-                            ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(
+                      //       left: 0, right: 0, bottom: 0, top: 0),
+                      //   child: Container(
+                      //     height: 55, //gives the height of the dropdown button
+                      //     width: MediaQuery.of(context)
+                      //         .size
+                      //         .width, //gives the width of the dropdown button
+                      //     decoration: BoxDecoration(
+                      //       borderRadius: BorderRadius.all(Radius.circular(13)),
+                      //       // color: Color(0xFFF2F2F2)
+                      //     ),
 
-                            _buildTextField(),
-                            // Container(
-                            //   height: 50,
-                            //   child: Row(
-                            //     children: [
-                            //       Expanded(
-                            //         child: TextFormField(
-                            //           decoration: InputDecoration(
-                            //             enabledBorder: OutlineInputBorder(
-                            //               borderSide: BorderSide(
-                            //                   color: Colors.blue),
-                            //             ),
-                            //             contentPadding:
-                            //                 new EdgeInsets.symmetric(
-                            //                     vertical: 100.0,
-                            //                     horizontal: 10.0),
-                            //           ),
-                            //           maxLines: 40,
-                            //         ),
-                            //       )
-                            //     ],
-                            //   ),
-                            // ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            // flex: 1,
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 0, right: 0.0),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    height: 33,
-                                    width: 100,
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(21, 183, 98, 1),
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
-                                    padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
-                                    child: Row(
-                                      children: [
-                                        Icon(
-                                          Icons.attach_file,
-                                          color: Colors.white,
-                                          size: 16,
-                                        ),
-                                        Text(
-                                          DemoLocalization.of(context)
-                                              .getTranslatedValue('attachmnts'),
-                                          textDirection: TextDirection.rtl,
-                                          style: TextStyle(
-                                              fontSize: 14,
-                                              color: Colors.white),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                                // onPress: () {
-                                //   // Navigator.of(context).pushReplacement(
-                                //   //     MaterialPageRoute(
-                                //   //         builder: (context) => Home()));
-                                // },
-                                // text: 'Attach',
-                                // color: Color.fromRGBO(39, 165, 232, 1),
-                              ),
-                            ),
-
-                            Expanded(
-                              // flex: 1,
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 3.0, right: 0.0),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Text(
-                                          DemoLocalization.of(context)
-                                              .getTranslatedValue('attchFile'),
-                                          textDirection: TextDirection.rtl,
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          DemoLocalization.of(context)
-                                              .getTranslatedValue(
-                                                  'attchFileSize'),
-                                          textDirection: TextDirection.rtl,
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 18),
-                      Container(
-                        child: Button(
-                          onPress: () {
-                            // if (_popUpFormKey.currentState.validate()) {
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (context) => Home(),
-                              ),
-                            );
-                            // }
-                          },
-                          text: DemoLocalization.of(context)
-                              .getTranslatedValue('submitBtn'),
-                          color: Color.fromRGBO(39, 165, 232, 1),
-                        ),
-                      ),
+                      //     child: Theme(
+                      //       data: Theme.of(context).copyWith(
+                      //           canvasColor: Colors
+                      //               .white, // background color for the dropdown items
+                      //           buttonTheme: ButtonTheme.of(context).copyWith(
+                      //             alignedDropdown:
+                      //                 true, //If false (the default), then the dropdown's menu will be wider than its button.
+                      //           )),
+                      //       child: DropdownButtonFormField<String>(
+                      //         decoration: InputDecoration(
+                      //           contentPadding: EdgeInsets.all(0.0),
+                      //           enabledBorder: OutlineInputBorder(
+                      //             borderSide: BorderSide(color: Colors.grey),
+                      //             borderRadius: BorderRadius.circular(10.0),
+                      //           ),
+                      //         ),
+                      //         items: _possibleCountyrName
+                      //             .map((String dropDownStringItem) {
+                      //           return DropdownMenuItem<String>(
+                      //             value: dropDownStringItem,
+                      //             child: Text(dropDownStringItem),
+                      //           );
+                      //         }).toList(),
+                      //         hint: Text(
+                      //           DemoLocalization.of(context)
+                      //               .getTranslatedValue('ContryNam'),
+                      //           // DemoLocalization.of(context)
+                      //           //     .getTranslatedValue('bankName'),
+                      //         ),
+                      //         onChanged: (String newValueSelected) {
+                      //           setState(() {
+                      //             this._countryName = newValueSelected;
+                      //           });
+                      //         },
+                      //         value: _countryName,
+                      //         validator: (_countryName) => _countryName == null
+                      //             ? 'Please select Bank'
+                      //             : null,
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
+                      // SizedBox(height: 0),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(
+                      //       left: 0, right: 0, bottom: 0, top: 0),
+                      //   child: Container(
+                      //     height: 55, //gives the height of the dropdown button
+                      //     width: MediaQuery.of(context)
+                      //         .size
+                      //         .width, //gives the width of the dropdown button
+                      //     decoration: BoxDecoration(
+                      //       borderRadius: BorderRadius.all(Radius.circular(13)),
+                      //       // color: Color(0xFFF2F2F2)
+                      //     ),
+                      //     child: Theme(
+                      //       data: Theme.of(context).copyWith(
+                      //           canvasColor: Colors
+                      //               .white, // background color for the dropdown items
+                      //           buttonTheme: ButtonTheme.of(context).copyWith(
+                      //             alignedDropdown:
+                      //                 true, //If false (the default), then the dropdown's menu will be wider than its button.
+                      //           )),
+                      //       child: DropdownButtonFormField<String>(
+                      //         decoration: InputDecoration(
+                      //           contentPadding: EdgeInsets.all(0.0),
+                      //           enabledBorder: OutlineInputBorder(
+                      //             borderSide: BorderSide(color: Colors.grey),
+                      //             borderRadius: BorderRadius.circular(10.0),
+                      //           ),
+                      //         ),
+                      //         items: _possibleCityTehsilName
+                      //             .map((String dropDownStringItem) {
+                      //           return DropdownMenuItem<String>(
+                      //             value: dropDownStringItem,
+                      //             child: Text(dropDownStringItem),
+                      //           );
+                      //         }).toList(),
+                      //         hint: Text(
+                      //           DemoLocalization.of(context)
+                      //               .getTranslatedValue('city/Teh'),
+                      //         ),
+                      //         onChanged: (String newValueSelected) {
+                      //           setState(() {
+                      //             this._cityTehsilName = newValueSelected;
+                      //           });
+                      //         },
+                      //         value: _cityTehsilName,
+                      //         validator: (_cityTehsilName) =>
+                      //             _cityTehsilName == null
+                      //                 ? 'Please select Bank'
+                      //                 : null,
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
+                      // SizedBox(height: 0),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(
+                      //       left: 0, right: 0, bottom: 0, top: 0),
+                      //   child: Container(
+                      //     height: 55, //gives the height of the dropdown button
+                      //     width: MediaQuery.of(context)
+                      //         .size
+                      //         .width, //gives the width of the dropdown button
+                      //     decoration: BoxDecoration(
+                      //       borderRadius: BorderRadius.all(Radius.circular(13)),
+                      //       // color: Color(0xFFF2F2F2)
+                      //     ),
+                      //     child: Theme(
+                      //       data: Theme.of(context).copyWith(
+                      //           canvasColor: Colors
+                      //               .white, // background color for the dropdown items
+                      //           buttonTheme: ButtonTheme.of(context).copyWith(
+                      //             alignedDropdown:
+                      //                 true, //If false (the default), then the dropdown's menu will be wider than its button.
+                      //           )),
+                      //       child: DropdownButtonFormField<String>(
+                      //         decoration: InputDecoration(
+                      //           contentPadding: EdgeInsets.all(0.0),
+                      //           enabledBorder: OutlineInputBorder(
+                      //             borderSide: BorderSide(color: Colors.grey),
+                      //             borderRadius: BorderRadius.circular(10.0),
+                      //           ),
+                      //         ),
+                      //         items: _possibleProvincelName
+                      //             .map((String dropDownStringItem) {
+                      //           return DropdownMenuItem<String>(
+                      //             value: dropDownStringItem,
+                      //             child: Text(dropDownStringItem),
+                      //           );
+                      //         }).toList(),
+                      //         hint: Text(
+                      //           DemoLocalization.of(context)
+                      //               .getTranslatedValue('prov'),
+                      //         ),
+                      //         onChanged: (String newValueSelected) {
+                      //           setState(() {
+                      //             this._provincelName = newValueSelected;
+                      //           });
+                      //         },
+                      //         value: _provincelName,
+                      //         validator: (_provincelName) =>
+                      //             _provincelName == null
+                      //                 ? 'Please select Bank'
+                      //                 : null,
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
+                      _buildAddressTextField(),
                     ],
                   ),
                 ],
               ),
             ),
-          ),
-        ],
+            SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              child: Row(
+                children: [
+                  Text(
+                    DemoLocalization.of(context).getTranslatedValue('bankDet'),
+                    style: TextStyle(
+                        color: Color.fromRGBO(0, 115, 50, 1),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w800),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 5),
+            Container(
+              padding: EdgeInsets.all(0),
+              // color: Color.fromRGBO(0, 115, 50, 1),
+              child: Container(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: Column(
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Padding(
+                        //   padding: const EdgeInsets.only(
+                        //       left: 0, right: 0, bottom: 0, top: 0),
+                        //   child: Container(
+                        //     height:
+                        //         55, //gives the height of the dropdown button
+                        //     width: MediaQuery.of(context)
+                        //         .size
+                        //         .width, //gives the width of the dropdown button
+                        //     decoration: BoxDecoration(
+                        //       borderRadius:
+                        //           BorderRadius.all(Radius.circular(13)),
+                        //       // color: Color(0xFFF2F2F2)
+                        //     ),
+                        //     child: Theme(
+                        //       data: Theme.of(context).copyWith(
+                        //           canvasColor: Colors
+                        //               .white, // background color for the dropdown items
+                        //           buttonTheme: ButtonTheme.of(context).copyWith(
+                        //             alignedDropdown:
+                        //                 true, //If false (the default), then the dropdown's menu will be wider than its button.
+                        //           )),
+                        //       child: DropdownButtonFormField<String>(
+                        //         decoration: InputDecoration(
+                        //           contentPadding: EdgeInsets.all(0.0),
+                        //           enabledBorder: OutlineInputBorder(
+                        //             borderSide: BorderSide(color: Colors.grey),
+                        //             borderRadius: BorderRadius.circular(10.0),
+                        //           ),
+                        //         ),
+                        //         items: _possiblecomplainAgainst
+                        //             .map((String dropDownStringItem) {
+                        //           return DropdownMenuItem<String>(
+                        //             value: dropDownStringItem,
+                        //             child: Text(dropDownStringItem),
+                        //           );
+                        //         }).toList(),
+                        //         hint: Text(
+                        //           DemoLocalization.of(context)
+                        //               .getTranslatedValue('complanAgainst'),
+                        //         ),
+                        //         onChanged: (String newValueSelected) {
+                        //           setState(() {
+                        //             this._complainAgainst = newValueSelected;
+                        //           });
+                        //         },
+                        //         value: _complainAgainst,
+                        //         validator: (_complainAgainst) =>
+                        //             _complainAgainst == null
+                        //                 ? 'Please select Bank'
+                        //                 : null,
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 0, right: 0, bottom: 0, top: 0),
+                          child: Container(
+                            height:
+                                55, //gives the height of the dropdown button
+                            width: MediaQuery.of(context)
+                                .size
+                                .width, //gives the width of the dropdown button
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(13)),
+                              // color: Color(0xFFF2F2F2)
+                            ),
+                            child: Theme(
+                              data: Theme.of(context).copyWith(
+                                  canvasColor: Colors
+                                      .white, // background color for the dropdown items
+                                  buttonTheme: ButtonTheme.of(context).copyWith(
+                                    alignedDropdown:
+                                        true, //If false (the default), then the dropdown's menu will be wider than its button.
+                                  )),
+                              child: DropdownButtonFormField<String>(
+                                decoration: InputDecoration(
+                                  contentPadding: EdgeInsets.all(0.0),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                                items: _possibleBankName
+                                    .map((String dropDownStringItem) {
+                                  return DropdownMenuItem<String>(
+                                    value: dropDownStringItem,
+                                    child: Text(dropDownStringItem),
+                                  );
+                                }).toList(),
+                                hint: Text(
+                                  DemoLocalization.of(context)
+                                      .getTranslatedValue('bankName'),
+                                ),
+                                onChanged: (String newValueSelected) {
+                                  setState(() {
+                                    this._bankNameSelected = newValueSelected;
+                                  });
+                                },
+                                value: _bankNameSelected,
+                                validator: (_bankNameSelected) =>
+                                    _bankNameSelected == null
+                                        ? 'Please select Bank'
+                                        : null,
+                              ),
+                            ),
+                          ),
+                        ),
+                        // Padding(
+                        //   padding: const EdgeInsets.only(
+                        //       left: 0, right: 0, bottom: 0, top: 0),
+                        //   child: Container(
+                        //     height:
+                        //         55, //gives the height of the dropdown button
+                        //     width: MediaQuery.of(context)
+                        //         .size
+                        //         .width, //gives the width of the dropdown button
+                        //     decoration: BoxDecoration(
+                        //       borderRadius:
+                        //           BorderRadius.all(Radius.circular(13)),
+                        //       // color: Color(0xFFF2F2F2)
+                        //     ),
+                        //     child: Theme(
+                        //       data: Theme.of(context).copyWith(
+                        //           canvasColor: Colors
+                        //               .white, // background color for the dropdown items
+                        //           buttonTheme: ButtonTheme.of(context).copyWith(
+                        //             alignedDropdown:
+                        //                 true, //If false (the default), then the dropdown's menu will be wider than its button.
+                        //           )),
+                        //       child: DropdownButtonFormField<String>(
+                        //         decoration: InputDecoration(
+                        //           contentPadding: EdgeInsets.all(0.0),
+                        //           enabledBorder: OutlineInputBorder(
+                        //             borderSide: BorderSide(color: Colors.grey),
+                        //             borderRadius: BorderRadius.circular(10.0),
+                        //           ),
+                        //         ),
+                        //         items: _possibleProvincelName
+                        //             .map((String dropDownStringItem) {
+                        //           return DropdownMenuItem<String>(
+                        //             value: dropDownStringItem,
+                        //             child: Text(dropDownStringItem),
+                        //           );
+                        //         }).toList(),
+                        //         hint: Text(
+                        //           DemoLocalization.of(context)
+                        //               .getTranslatedValue('bankProv'),
+                        //         ),
+                        //         onChanged: (String newValueSelected) {
+                        //           setState(() {
+                        //             this._provincelName = newValueSelected;
+                        //           });
+                        //         },
+                        //         value: _provincelName,
+                        //         validator: (_provincelName) =>
+                        //             _provincelName == null
+                        //                 ? 'Please select Bank Province'
+                        //                 : null,
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
+                        SizedBox(height: 0),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 0, right: 0, bottom: 0, top: 0),
+                          child: Container(
+                            height:
+                                55, //gives the height of the dropdown button
+                            width: MediaQuery.of(context)
+                                .size
+                                .width, //gives the width of the dropdown button
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(13)),
+                              // color: Color(0xFFF2F2F2)
+                            ),
+                            child: Theme(
+                              data: Theme.of(context).copyWith(
+                                  canvasColor: Colors
+                                      .white, // background color for the dropdown items
+                                  buttonTheme: ButtonTheme.of(context).copyWith(
+                                    alignedDropdown:
+                                        true, //If false (the default), then the dropdown's menu will be wider than its button.
+                                  )),
+                              child: DropdownButtonFormField<String>(
+                                decoration: InputDecoration(
+                                  contentPadding: EdgeInsets.all(0.0),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                                items: _possibleBankCity
+                                    .map((String dropDownStringItem) {
+                                  return DropdownMenuItem<String>(
+                                    value: dropDownStringItem,
+                                    child: Text(dropDownStringItem),
+                                  );
+                                }).toList(),
+                                hint: Text(
+                                  DemoLocalization.of(context)
+                                      .getTranslatedValue('bankcity'),
+                                ),
+                                onChanged: (String newValueSelected) {
+                                  setState(() {
+                                    this._bankNameCity = newValueSelected;
+                                  });
+                                },
+                                value: _bankNameCity,
+                                validator: (_bankNameCity) =>
+                                    _bankNameCity == null
+                                        ? 'Please select Bank City'
+                                        : null,
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 0),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 0, right: 0, bottom: 0, top: 0),
+                          child: Container(
+                            height:
+                                55, //gives the height of the dropdown button
+                            width: MediaQuery.of(context)
+                                .size
+                                .width, //gives the width of the dropdown button
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(13)),
+                              // color: Color(0xFFF2F2F2)
+                            ),
+                            child: Theme(
+                              data: Theme.of(context).copyWith(
+                                  canvasColor: Colors
+                                      .white, // background color for the dropdown items
+                                  buttonTheme: ButtonTheme.of(context).copyWith(
+                                    alignedDropdown:
+                                        true, //If false (the default), then the dropdown's menu will be wider than its button.
+                                  )),
+                              child: DropdownButtonFormField<String>(
+                                decoration: InputDecoration(
+                                  contentPadding: EdgeInsets.all(0.0),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                                items: _bankbranchName
+                                    .map((String dropDownStringItem) {
+                                  return DropdownMenuItem<String>(
+                                    value: dropDownStringItem,
+                                    child: Text(dropDownStringItem),
+                                  );
+                                }).toList(),
+                                hint: Text(
+                                  DemoLocalization.of(context)
+                                      .getTranslatedValue('branchCity'),
+                                ),
+                                onChanged: (String newValueSelected) {
+                                  setState(() {
+                                    this._branchName = newValueSelected;
+                                  });
+                                },
+                                value: _branchName,
+                                validator: (_bankNameSelected) =>
+                                    _branchName == null
+                                        ? 'Please select Bank Branch'
+                                        : null,
+                              ),
+                            ),
+                          ),
+                        ),
+                        _buildOtherBrancInfoTextField(),
+                        SizedBox(height: 10),
+                        Container(
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    DemoLocalization.of(context)
+                                        .getTranslatedValue('complaintDeta'),
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(0, 115, 50, 1),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w800),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 5),
+                              Row(
+                                children: [
+                                  Text(
+                                      DemoLocalization.of(context)
+                                          .getTranslatedValue(
+                                              'complainCategry'),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500)),
+                                  SizedBox(width: 10),
+                                  Text(
+                                      DemoLocalization.of(context)
+                                          .getTranslatedValue('complaintName'),
+                                      style: TextStyle(fontSize: 12)),
+                                ],
+                              ),
+                              // Padding(
+                              //   padding: const EdgeInsets.only(
+                              //       left: 0, right: 0, bottom: 0, top: 0),
+                              //   child: Container(
+                              //     height:
+                              //         55, //gives the height of the dropdown button
+                              //     width: MediaQuery.of(context)
+                              //         .size
+                              //         .width, //gives the width of the dropdown button
+                              //     decoration: BoxDecoration(
+                              //       borderRadius:
+                              //           BorderRadius.all(Radius.circular(13)),
+                              //       // color: Color(0xFFF2F2F2)
+                              //     ),
+                              //     child: Theme(
+                              //       data: Theme.of(context).copyWith(
+                              //           canvasColor: Colors
+                              //               .white, // background color for the dropdown items
+                              //           buttonTheme:
+                              //               ButtonTheme.of(context).copyWith(
+                              //             alignedDropdown:
+                              //                 true, //If false (the default), then the dropdown's menu will be wider than its button.
+                              //           )),
+                              //       child: DropdownButtonFormField<String>(
+                              //         decoration: InputDecoration(
+                              //           contentPadding: EdgeInsets.all(0.0),
+                              //           enabledBorder: OutlineInputBorder(
+                              //             borderSide:
+                              //                 BorderSide(color: Colors.grey),
+                              //             borderRadius:
+                              //                 BorderRadius.circular(10.0),
+                              //           ),
+                              //         ),
+                              //         items: _possiblecomplainCategory
+                              //             .map((String dropDownStringItem) {
+                              //           return DropdownMenuItem<String>(
+                              //             value: dropDownStringItem,
+                              //             child: Text(dropDownStringItem),
+                              //           );
+                              //         }).toList(),
+                              //         hint: Text(
+                              //           DemoLocalization.of(context)
+                              //               .getTranslatedValue(
+                              //                   'complaintCategory'),
+                              //         ),
+                              //         onChanged: (String newValueSelected) {
+                              //           setState(() {
+                              //             this._complainCategory =
+                              //                 newValueSelected;
+                              //           });
+                              //         },
+                              //         value: _complainCategory,
+                              //         validator: (_complainCategory) =>
+                              //             _complainCategory == null
+                              //                 ? 'Please select Compaint Category'
+                              //                 : null,
+                              //       ),
+                              //     ),
+                              //   ),
+                              // ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 0, right: 0, bottom: 0, top: 0),
+                                child: Container(
+                                  height:
+                                      55, //gives the height of the dropdown button
+                                  width: MediaQuery.of(context)
+                                      .size
+                                      .width, //gives the width of the dropdown button
+                                  decoration: BoxDecoration(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(13)),
+                                    // color: Color(0xFFF2F2F2)
+                                  ),
+                                  child: Theme(
+                                    data: Theme.of(context).copyWith(
+                                        canvasColor: Colors
+                                            .white, // background color for the dropdown items
+                                        buttonTheme:
+                                            ButtonTheme.of(context).copyWith(
+                                          alignedDropdown:
+                                              true, //If false (the default), then the dropdown's menu will be wider than its button.
+                                        )),
+                                    child: DropdownButtonFormField<String>(
+                                      decoration: InputDecoration(
+                                        contentPadding: EdgeInsets.all(0.0),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.grey),
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                      ),
+                                      items: _possiblesubcomplainCategory
+                                          .map((String dropDownStringItem) {
+                                        return DropdownMenuItem<String>(
+                                          value: dropDownStringItem,
+                                          child: Text(dropDownStringItem),
+                                        );
+                                      }).toList(),
+                                      hint: Text(
+                                        DemoLocalization.of(context)
+                                            .getTranslatedValue(
+                                                'complnSubCate'),
+                                      ),
+                                      onChanged: (String newValueSelected) {
+                                        setState(() {
+                                          this._subcomplainCategory =
+                                              newValueSelected;
+                                        });
+                                      },
+                                      value: _subcomplainCategory,
+                                      validator: (_subcomplainCategory) =>
+                                          _subcomplainCategory == null
+                                              ? 'Please select Complaint Sub Category'
+                                              : null,
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                              _buildTextField(),
+                              // Container(
+                              //   height: 50,
+                              //   child: Row(
+                              //     children: [
+                              //       Expanded(
+                              //         child: TextFormField(
+                              //           decoration: InputDecoration(
+                              //             enabledBorder: OutlineInputBorder(
+                              //               borderSide: BorderSide(
+                              //                   color: Colors.blue),
+                              //             ),
+                              //             contentPadding:
+                              //                 new EdgeInsets.symmetric(
+                              //                     vertical: 100.0,
+                              //                     horizontal: 10.0),
+                              //           ),
+                              //           maxLines: 40,
+                              //         ),
+                              //       )
+                              //     ],
+                              //   ),
+                              // ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          child: Row(
+                            children: [
+                              // flex: 1,
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 0, right: 0.0),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 33,
+                                      width: 100,
+                                      decoration: BoxDecoration(
+                                        color: Color.fromRGBO(21, 183, 98, 1),
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+                                      child: Row(
+                                        children: [
+                                          Icon(
+                                            Icons.attach_file,
+                                            color: Colors.white,
+                                            size: 16,
+                                          ),
+                                          Text(
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue(
+                                                    'attachmnts'),
+                                            textDirection: TextDirection.rtl,
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Colors.white),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                  // onPress: () {
+                                  //   // Navigator.of(context).pushReplacement(
+                                  //   //     MaterialPageRoute(
+                                  //   //         builder: (context) => Home()));
+                                  // },
+                                  // text: 'Attach',
+                                  // color: Color.fromRGBO(39, 165, 232, 1),
+                                ),
+                              ),
+
+                              Expanded(
+                                // flex: 1,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 3.0, right: 0.0),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue(
+                                                    'attchFile'),
+                                            textDirection: TextDirection.rtl,
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue(
+                                                    'attchFileSize'),
+                                            textDirection: TextDirection.rtl,
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 18),
+                        Container(
+                          child: Button(
+                            onPress: () {
+                              // if (_popUpFormKey.currentState.validate()) {
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => Home(),
+                                ),
+                              );
+                              // }
+                            },
+                            text: DemoLocalization.of(context)
+                                .getTranslatedValue('submitBtn'),
+                            color: Color.fromRGBO(39, 165, 232, 1),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -1401,7 +1426,8 @@ class _RegisterComplainState extends State<RegisterComplain> {
       child: TextField(
         maxLines: maxLines,
         decoration: InputDecoration(
-          hintText: 'Complete Postal Address',
+          hintText:
+              DemoLocalization.of(context).getTranslatedValue('postalAdres'),
           fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(
@@ -1426,7 +1452,8 @@ class _RegisterComplainState extends State<RegisterComplain> {
       child: TextField(
         maxLines: maxLines,
         decoration: InputDecoration(
-          hintText: 'Other Branch Information',
+          hintText:
+              DemoLocalization.of(context).getTranslatedValue('otherBankInf'),
           fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(

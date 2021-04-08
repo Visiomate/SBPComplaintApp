@@ -30,94 +30,97 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.fromLTRB(40, 20, 40, 300),
-          color: Color.fromRGBO(0, 115, 50, 1),
+      body: Directionality(
+        textDirection: TextDirection.ltr,
+        child: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.fromLTRB(20, 100, 20, 0),
-            child: Form(
-              key: _popUpFormKey,
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    height: 140,
-                    width: 140,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/logo_white.png"),
-                          fit: BoxFit.fill),
+            padding: EdgeInsets.fromLTRB(40, 20, 40, 300),
+            color: Color.fromRGBO(0, 115, 50, 1),
+            child: Container(
+              padding: EdgeInsets.fromLTRB(20, 100, 20, 0),
+              child: Form(
+                key: _popUpFormKey,
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      height: 140,
+                      width: 140,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/logo_white.png"),
+                            fit: BoxFit.fill),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 40,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CustomTextField(
-                        controller: emailInputController,
-                        hintText: DemoLocalization.of(context)
-                            .getTranslatedValue('email'),
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return 'Email is required';
-                          }
-                          if (!EmailValidator.validate(value)) {
-                            return 'Please enter a valid email';
-                          }
-                          return null;
-                        },
-                      ),
-                      SizedBox(height: 10),
-                      CustomTextField(
-                        controller: passwordInputController,
-                        hintText: '***********',
-                        validator: (value) {
-                          if (value.isEmpty) {
-                            return 'Password is required';
-                          }
-                          return null;
-                        },
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          print('forgotPassword');
-                        },
-                        child: Container(
-                          padding: EdgeInsets.fromLTRB(120, 10, 0, 0),
-                          child: Text(
-                            DemoLocalization.of(context)
-                                .getTranslatedValue('forGotPass'),
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white,
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CustomTextField(
+                          controller: emailInputController,
+                          hintText: DemoLocalization.of(context)
+                              .getTranslatedValue('email'),
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'Email is required';
+                            }
+                            if (!EmailValidator.validate(value)) {
+                              return 'Please enter a valid email';
+                            }
+                            return null;
+                          },
+                        ),
+                        SizedBox(height: 10),
+                        CustomTextField(
+                          controller: passwordInputController,
+                          hintText: '***********',
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'Password is required';
+                            }
+                            return null;
+                          },
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            print('forgotPassword');
+                          },
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(120, 10, 0, 0),
+                            child: Text(
+                              DemoLocalization.of(context)
+                                  .getTranslatedValue('forGotPass'),
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.right,
                             ),
-                            textAlign: TextAlign.right,
                           ),
                         ),
-                      ),
-                      SizedBox(height: 20),
-                      Container(
-                        child: Button(
-                          onPress: () {
-                            if (_popUpFormKey.currentState.validate()) {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (context) => Home(),
-                                ),
-                              );
-                            }
-                          },
-                          text: DemoLocalization.of(context)
-                              .getTranslatedValue('login'),
-                          color: Color.fromRGBO(11, 175, 89, 1),
+                        SizedBox(height: 20),
+                        Container(
+                          child: Button(
+                            onPress: () {
+                              if (_popUpFormKey.currentState.validate()) {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => Home(),
+                                  ),
+                                );
+                              }
+                            },
+                            text: DemoLocalization.of(context)
+                                .getTranslatedValue('login'),
+                            color: Color.fromRGBO(11, 175, 89, 1),
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -29,8 +29,8 @@ class CardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => FirstQuestion()));
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => FirstQuestion()));
         // Navigator.of(context).push(
         //   MaterialPageRoute(
         //     builder: (context) => RegisterComplain(),
@@ -40,7 +40,7 @@ class CardWidget extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 100,
+            height: 95,
             width: 172,
             decoration: decoratn,
           ),
@@ -49,7 +49,7 @@ class CardWidget extends StatelessWidget {
           //   height: 100,
           // ),
           Container(
-            height: 40,
+            height: 50,
             width: 172,
             decoration: new BoxDecoration(
               color: Colors.white,

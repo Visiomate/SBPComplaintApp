@@ -49,6 +49,10 @@ class _ThirdQuestPageState extends State<ThirdQuestPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Questions'),
+        leading: IconButton(
+          icon: Icon(Icons.chevron_left_sharp),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: dialogContent(context),
     );
@@ -63,14 +67,15 @@ class _ThirdQuestPageState extends State<ThirdQuestPage> {
             // To make the card compact
             children: <Widget>[
               Text(
-                '3.	Exclusion/agreement?                     ',
+                DemoLocalization.of(context).getTranslatedValue('que3'),
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.w500,
                 ),
               ),
               Text(
-                'a.	Do you agree that your complaint is not pending/decided by any court of Law, Law Enforcement Agency and is not an individual service related matter/HR issue with any Bank.',
+                DemoLocalization.of(context)
+                    .getTranslatedValue('que3AgreeStat'),
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w300,
@@ -111,7 +116,9 @@ class _ThirdQuestPageState extends State<ThirdQuestPage> {
               //
               RadioListTile(
                 groupValue: selectedRadioTile,
-                title: Text('I Agree'),
+                title: Text(
+                  DemoLocalization.of(context).getTranslatedValue('agree'),
+                ),
                 value: 1,
                 onChanged: (val) {
                   showWidget(val);
@@ -119,7 +126,9 @@ class _ThirdQuestPageState extends State<ThirdQuestPage> {
               ),
               RadioListTile(
                 groupValue: selectedRadioTile,
-                title: Text('I Disagree'),
+                title: Text(
+                  DemoLocalization.of(context).getTranslatedValue('noAgree'),
+                ),
                 value: 2,
                 onChanged: (val) {
                   hideWidget(val);
@@ -191,7 +200,8 @@ class _ThirdQuestPageState extends State<ThirdQuestPage> {
                                             );
                                             // }
                                           },
-                                          text: ('Next'),
+                                          text: (DemoLocalization.of(context)
+                                              .getTranslatedValue('next')),
                                           // DemoLocalization.of(context)
                                           //     .getTranslatedValue('login'),
                                           color: Color.fromRGBO(11, 175, 89, 1),
@@ -225,7 +235,9 @@ class _ThirdQuestPageState extends State<ThirdQuestPage> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        '1.	Dear Sir/Madam,You may kindly approach relevant forum for resolution of issue as State Bank of Pakistan does not intervene in such issues as matter of policy.Thank you for contacting State Bank of Pakistan',
+                                        (DemoLocalization.of(context)
+                                            .getTranslatedValue(
+                                                'disAgreeContnt')),
                                         style: TextStyle(
                                             color: Colors.black, fontSize: 12),
                                       ),
@@ -267,7 +279,8 @@ class _ThirdQuestPageState extends State<ThirdQuestPage> {
                                             );
                                             // }
                                           },
-                                          text: ('Back To Dashboard'),
+                                          text: ((DemoLocalization.of(context)
+                                              .getTranslatedValue('backDash'))),
                                           // DemoLocalization.of(context)
                                           //     .getTranslatedValue('login'),
                                           color: Color.fromRGBO(11, 175, 89, 1),

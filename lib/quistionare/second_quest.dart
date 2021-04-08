@@ -52,6 +52,10 @@ class _SecondQuestionPageState extends State<SecondQuestionPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Questions'),
+        leading: IconButton(
+          icon: Icon(Icons.chevron_left_sharp),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: dialogContent(context),
     );
@@ -66,7 +70,7 @@ class _SecondQuestionPageState extends State<SecondQuestionPage> {
             mainAxisSize: MainAxisSize.min, // To make the card compact
             children: <Widget>[
               Text(
-                "2.	Is your matter pending/ decided by Banking Mohtasib of Pakistan? (Excluded in Case of MFBs)?",
+                DemoLocalization.of(context).getTranslatedValue('que2'),
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.w400,
@@ -106,7 +110,9 @@ class _SecondQuestionPageState extends State<SecondQuestionPage> {
               // ),
               RadioListTile(
                 groupValue: selectedRadioTile,
-                title: Text('No'),
+                title: Text(
+                  DemoLocalization.of(context).getTranslatedValue('no'),
+                ),
                 value: 1,
                 onChanged: (val) {
                   hideWidget(val);
@@ -115,7 +121,9 @@ class _SecondQuestionPageState extends State<SecondQuestionPage> {
 
               RadioListTile(
                 groupValue: selectedRadioTile,
-                title: Text('yes'),
+                title: Text(
+                  DemoLocalization.of(context).getTranslatedValue('yes'),
+                ),
                 value: 2,
                 onChanged: (val) {
                   showWidget(val);
@@ -144,84 +152,8 @@ class _SecondQuestionPageState extends State<SecondQuestionPage> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        'i.	Dear Sir/Madam,We understand that your complaint has already been handled by the Banking Mohtasib Pakistan (BMP).  Under Section 18 of Federal Ombudsman Institutional Reforms Act (FOIRA), 2013, no court or authority shall have jurisdiction to entertain any matter which falls under the jurisdiction of Ombudsman nor court or authority shall assume jurisdiction in respect of any matter pending with or decided by an Ombudsman. You may, therefore, pursue your matter with Banking Mohtasib / relevant forum',
-                                        style: TextStyle(
-                                            color: Colors.black, fontSize: 12),
-                                      ),
-                                      // CustomTextField(
-                                      //   controller: emailInputController,
-                                      //   hintText: DemoLocalization.of(context)
-                                      //       .getTranslatedValue('email'),
-                                      //   validator: (value) {
-                                      //     if (value.isEmpty) {
-                                      //       return 'Email is required';
-                                      //     }
-                                      //     // if (!EmailValidator.validate(value)) {
-                                      //     //   return 'Please enter a valid email';
-                                      //     // }
-                                      //     return null;
-                                      //   },
-                                      // ),
-                                      // SizedBox(height: 10),
-                                      // CustomTextField(
-                                      //   controller: passwordInputController,
-                                      //   hintText: '***********',
-                                      //   validator: (value) {
-                                      //     if (value.isEmpty) {
-                                      //       return 'Password is required';
-                                      //     }
-                                      //     return null;
-                                      //   },
-                                      // ),
-
-                                      Container(
-                                        child: Button(
-                                          onPress: () {
-                                            // if (_popUpFormKey.currentState.validate()) {
-                                            Navigator.of(context)
-                                                .pushReplacement(
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ThirdQuestPage(),
-                                              ),
-                                            );
-                                            // }
-                                          },
-                                          text: ('Next'),
-                                          // DemoLocalization.of(context)
-                                          //     .getTranslatedValue('login'),
-                                          color: Color.fromRGBO(11, 175, 89, 1),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      )
-                    : new Visibility(
-                        maintainSize: true,
-                        maintainAnimation: true,
-                        maintainState: true,
-                        visible: viewSecondVisible,
-                        child: Container(
-                          // height: 80,
-                          // width: 300,
-                          color: Colors.white,
-                          margin: EdgeInsets.only(top: 10, bottom: 0),
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(0, 10, 20, 0),
-                            child: Column(
-                              children: <Widget>[
-                                Container(
-                                  padding: EdgeInsets.all(9),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'i.	Dear Sir/Madam, As per Federal Ombudsman Institutional Reforms Act (FOIRA), 2013, the Office of the Banking Mohtasib Pakistan (BMP) is the competent dispute resolution forum for deciding complaints lodged against banks operating in Pakistan. In case you are not satisfied with the bank’s response, BMP may be approached at the Banking Mohtasib Pakistan Secretariat, Shaheen Complex, 5th Floor, M.R. Kiyani Road, Karachi. Tel: (+9221) 99217334-8. Email: info@bankingmohtasib.gov.pk.',
+                                        DemoLocalization.of(context)
+                                            .getTranslatedValue('que2Yes'),
                                         style: TextStyle(
                                             color: Colors.black, fontSize: 12),
                                       ),
@@ -261,9 +193,89 @@ class _SecondQuestionPageState extends State<SecondQuestionPage> {
                                                 builder: (context) => Home(),
                                               ),
                                             );
+
                                             // }
                                           },
-                                          text: ('Back To Dashboard'),
+                                          text: DemoLocalization.of(context)
+                                              .getTranslatedValue('backDash'),
+                                          // DemoLocalization.of(context)
+                                          //     .getTranslatedValue('login'),
+                                          color: Color.fromRGBO(11, 175, 89, 1),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    : new Visibility(
+                        maintainSize: true,
+                        maintainAnimation: true,
+                        maintainState: true,
+                        visible: viewSecondVisible,
+                        child: Container(
+                          // height: 80,
+                          // width: 300,
+                          color: Colors.white,
+                          margin: EdgeInsets.only(top: 10, bottom: 0),
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(0, 10, 20, 0),
+                            child: Column(
+                              children: <Widget>[
+                                Container(
+                                  padding: EdgeInsets.all(9),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        DemoLocalization.of(context)
+                                            .getTranslatedValue('que2No'),
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 12),
+                                      ),
+                                      // CustomTextField(
+                                      //   controller: emailInputController,
+                                      //   hintText: DemoLocalization.of(context)
+                                      //       .getTranslatedValue('email'),
+                                      //   validator: (value) {
+                                      //     if (value.isEmpty) {
+                                      //       return 'Email is required';
+                                      //     }
+                                      //     // if (!EmailValidator.validate(value)) {
+                                      //     //   return 'Please enter a valid email';
+                                      //     // }
+                                      //     return null;
+                                      //   },
+                                      // ),
+                                      // SizedBox(height: 10),
+                                      // CustomTextField(
+                                      //   controller: passwordInputController,
+                                      //   hintText: '***********',
+                                      //   validator: (value) {
+                                      //     if (value.isEmpty) {
+                                      //       return 'Password is required';
+                                      //     }
+                                      //     return null;
+                                      //   },
+                                      // ),
+
+                                      Container(
+                                        child: Button(
+                                          onPress: () {
+                                            // if (_popUpFormKey.currentState.validate()) {
+                                            Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ThirdQuestPage(),
+                                              ),
+                                            );
+                                            // }
+                                          },
+                                          text: (DemoLocalization.of(context)
+                                              .getTranslatedValue('next')),
                                           // DemoLocalization.of(context)
                                           //     .getTranslatedValue('login'),
                                           color: Color.fromRGBO(11, 175, 89, 1),
