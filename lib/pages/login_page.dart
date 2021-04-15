@@ -3,7 +3,7 @@ import 'package:sbp_complaints_management/classes/language.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/main.dart';
 import 'package:sbp_complaints_management/pages/sign_in_page.dart';
-import 'package:sbp_complaints_management/pages/sign_up_page.dart';
+import 'package:sbp_complaints_management/pages/termsAndCondition.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -165,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Button(
                         onPress: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SignUpPage()));
+                              builder: (context) => TermsAndCondition()));
                         },
                         text: DemoLocalization.of(context)
                             .getTranslatedValue('signup'),

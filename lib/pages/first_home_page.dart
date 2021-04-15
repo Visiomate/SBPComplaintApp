@@ -14,13 +14,13 @@ class _FirstHomePageState extends State<FirstHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromRGBO(21, 183, 98, 1),
         automaticallyImplyLeading: false,
-        iconTheme: IconThemeData(color: Colors.grey),
+        // iconTheme: IconThemeData(color: Colors.grey),
         title: Center(
           child: Text(
             'HOME',
-            style: TextStyle(color: Colors.grey),
+            style: TextStyle(color: Colors.white),
           ),
         ),
         actions: <Widget>[
@@ -131,10 +131,10 @@ class HomeBody extends StatelessWidget {
                       ),
                       Container(
                         height: 100,
-                        width: 140,
+                        width: 120,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("assets/message.png"),
+                              image: AssetImage("assets/comp3.png"),
                               fit: BoxFit.fill),
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(15),
@@ -161,7 +161,7 @@ class HomeBody extends StatelessWidget {
                 height: 95,
                 // color: Colors.blue,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(106, 166, 220, 1),
+                  color: Color.fromRGBO(25, 127, 183, 1),
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(5),
                     bottomLeft: Radius.circular(5),
@@ -236,7 +236,7 @@ class HomeBody extends StatelessWidget {
                         padding: EdgeInsets.fromLTRB(10, 5, 5, 0),
                         height: 95,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(241, 60, 59, 1),
+                          color: Color.fromRGBO(240, 172, 66, 1),
                           borderRadius: BorderRadius.only(
                             bottomRight: Radius.circular(5),
                             bottomLeft: Radius.circular(5),
@@ -422,6 +422,78 @@ class HomeBody extends StatelessWidget {
                   ],
                 ),
               ),
+              Container(
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                height: 95,
+                // color: Colors.blue,
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(106, 166, 220, 1),
+                  borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(5),
+                    bottomLeft: Radius.circular(5),
+                    topRight: Radius.circular(5),
+                    topLeft: Radius.circular(5),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      child: Row(
+                        children: [
+                          Text(
+                            '2',
+                            style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    // SizedBox(height: 5),
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    'REJECTED COMPLAINTS',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 12),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 40,
+                          width: 40,
+                          child: IconButton(
+                              // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                              icon: Icon(
+                                Icons.delete,
+                                color: Colors.white,
+                              ),
+                              color: Colors.white,
+                              iconSize: 20,
+                              onPressed: () {
+                                print("Pressed");
+                              }),
+                        ),
+                        // ImageIcon(
+                        //   AssetImage('assets/c1.png'),
+                        //   // color: Colors.white,
+                        // ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
@@ -588,162 +660,162 @@ class HomeBody extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 10),
-              Container(
-                padding: const EdgeInsets.only(bottom: 4),
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        height: 95,
-                        padding: EdgeInsets.all(7),
-                        decoration: BoxDecoration(
-                            color: Colors.grey[100],
-                            borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(5),
-                              bottomLeft: Radius.circular(5),
-                              topRight: Radius.circular(5),
-                              topLeft: Radius.circular(5),
-                            ),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(
-                          children: [
-                            Center(
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      '0',
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w800,
-                                        color: Color.fromRGBO(240, 172, 66, 1),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Expanded(
-                                  flex: 1,
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'PENDING',
-                                            style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    240, 172, 66, 1),
-                                                fontSize: 10),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'FEEDBACKS',
-                                            style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    240, 172, 66, 1),
-                                                fontSize: 10),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.timelapse,
-                                  color: Color.fromRGBO(240, 172, 66, 1),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 10),
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        height: 95,
-                        padding: EdgeInsets.all(7),
-                        decoration: BoxDecoration(
-                            color: Colors.grey[100],
-                            borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(5),
-                              bottomLeft: Radius.circular(5),
-                              topRight: Radius.circular(5),
-                              topLeft: Radius.circular(5),
-                            ),
-                            border: Border.all(color: Colors.grey)),
-                        child: Column(
-                          children: [
-                            Center(
-                              child: Padding(
-                                padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      '42',
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w800,
-                                          color: Colors.red),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Expanded(
-                                  flex: 1,
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'DROPPED',
-                                            style: TextStyle(
-                                                color: Colors.red,
-                                                fontSize: 10),
-                                          ),
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'COMPLAINTS',
-                                            style: TextStyle(
-                                                color: Colors.red,
-                                                fontSize: 10),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.delete,
-                                  color: Colors.red,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // SizedBox(height: 10),
+              // Container(
+              //   padding: const EdgeInsets.only(bottom: 4),
+              //   child: Row(
+              //     children: [
+              //       Expanded(
+              //         flex: 1,
+              //         child: Container(
+              //           height: 95,
+              //           padding: EdgeInsets.all(7),
+              //           decoration: BoxDecoration(
+              //               color: Colors.grey[100],
+              //               borderRadius: BorderRadius.only(
+              //                 bottomRight: Radius.circular(5),
+              //                 bottomLeft: Radius.circular(5),
+              //                 topRight: Radius.circular(5),
+              //                 topLeft: Radius.circular(5),
+              //               ),
+              //               border: Border.all(color: Colors.grey)),
+              //           child: Column(
+              //             children: [
+              //               Center(
+              //                 child: Padding(
+              //                   padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+              //                   child: Row(
+              //                     children: [
+              //                       Text(
+              //                         '0',
+              //                         style: TextStyle(
+              //                           fontSize: 18,
+              //                           fontWeight: FontWeight.w800,
+              //                           color: Color.fromRGBO(240, 172, 66, 1),
+              //                         ),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                 ),
+              //               ),
+              //               SizedBox(height: 10),
+              //               // Row(
+              //               //   children: [
+              //               //     Expanded(
+              //               //       flex: 1,
+              //               //       child: Column(
+              //               //         children: [
+              //               //           Row(
+              //               //             children: [
+              //               //               Text(
+              //               //                 'PENDING',
+              //               //                 style: TextStyle(
+              //               //                     color: Color.fromRGBO(
+              //               //                         240, 172, 66, 1),
+              //               //                     fontSize: 10),
+              //               //               ),
+              //               //             ],
+              //               //           ),
+              //               //           Row(
+              //               //             children: [
+              //               //               Text(
+              //               //                 'FEEDBACKS',
+              //               //                 style: TextStyle(
+              //               //                     color: Color.fromRGBO(
+              //               //                         240, 172, 66, 1),
+              //               //                     fontSize: 10),
+              //               //               ),
+              //               //             ],
+              //               //           ),
+              //               //         ],
+              //               //       ),
+              //               //     ),
+              //               //     Icon(
+              //               //       Icons.timelapse,
+              //               //       color: Color.fromRGBO(240, 172, 66, 1),
+              //               //     ),
+              //               //   ],
+              //               // ),
+              //             ],
+              //           ),
+              //         ),
+              //       ),
+              //       SizedBox(width: 10),
+              //       Expanded(
+              //         flex: 1,
+              //         child: Container(
+              //           height: 95,
+              //           padding: EdgeInsets.all(7),
+              //           decoration: BoxDecoration(
+              //               color: Colors.grey[100],
+              //               borderRadius: BorderRadius.only(
+              //                 bottomRight: Radius.circular(5),
+              //                 bottomLeft: Radius.circular(5),
+              //                 topRight: Radius.circular(5),
+              //                 topLeft: Radius.circular(5),
+              //               ),
+              //               border: Border.all(color: Colors.grey)),
+              //           child: Column(
+              //             children: [
+              //               Center(
+              //                 child: Padding(
+              //                   padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+              //                   child: Row(
+              //                     children: [
+              //                       Text(
+              //                         '42',
+              //                         style: TextStyle(
+              //                             fontSize: 18,
+              //                             fontWeight: FontWeight.w800,
+              //                             color: Colors.red),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                 ),
+              //               ),
+              //               SizedBox(height: 10),
+              //               Row(
+              //                 children: [
+              //                   Expanded(
+              //                     flex: 1,
+              //                     child: Column(
+              //                       children: [
+              //                         Row(
+              //                           children: [
+              //                             Text(
+              //                               'DROPPED',
+              //                               style: TextStyle(
+              //                                   color: Colors.red,
+              //                                   fontSize: 10),
+              //                             ),
+              //                           ],
+              //                         ),
+              //                         Row(
+              //                           children: [
+              //                             Text(
+              //                               'COMPLAINTS',
+              //                               style: TextStyle(
+              //                                   color: Colors.red,
+              //                                   fontSize: 10),
+              //                             ),
+              //                           ],
+              //                         ),
+              //                       ],
+              //                     ),
+              //                   ),
+              //                   Icon(
+              //                     Icons.delete,
+              //                     color: Colors.red,
+              //                   ),
+              //                 ],
+              //               ),
+              //             ],
+              //           ),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
