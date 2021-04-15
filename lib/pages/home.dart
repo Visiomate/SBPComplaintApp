@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async => false,
+      // onWillPop: () async => false,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromRGBO(21, 183, 98, 1),

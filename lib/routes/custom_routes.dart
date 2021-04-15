@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sbp_complaints_management/pages/home_widget.dart';
+import 'package:sbp_complaints_management/pages/first_home_page.dart';
 import 'package:sbp_complaints_management/pages/login_page.dart';
 import 'package:sbp_complaints_management/pages/page_not_found.dart';
 import 'package:sbp_complaints_management/pages/sign_in_page.dart';
@@ -13,7 +13,7 @@ class CustomRouter {
       case signinRoute:
         return MaterialPageRoute(builder: (_) => SignInPage());
       case homepageRoute:
-        return MaterialPageRoute(builder: (_) => Home());
+        return MaterialPageRoute(builder: (_) => FirstHomePage());
     }
     return MaterialPageRoute(builder: (_) => PageNotFound());
   }

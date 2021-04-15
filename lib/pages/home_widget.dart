@@ -1,6 +1,8 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/pages/complain_list.dart';
 import 'package:sbp_complaints_management/pages/edit_profile.dart';
+import 'package:sbp_complaints_management/pages/first_home_page.dart';
 import 'package:sbp_complaints_management/pages/home.dart';
 import 'package:sbp_complaints_management/pages/notification_page.dart';
 import 'package:sbp_complaints_management/pages/profile_page.dart';
@@ -18,7 +20,7 @@ class _HomeState extends State<Home>
   // TabController tabController;
   int _currentIndex = 0;
   final List<Widget> _tablist = [
-    HomePage(),
+    FirstHomePage(),
     ComplainListPage(),
     NotificationPge(),
     ProfilePage(),
@@ -76,36 +78,19 @@ class _HomeState extends State<Home>
             ),
             BottomNavigationBarItem(
               backgroundColor: Colors.blue,
-              icon: new Stack(
-                children: <Widget>[
-                  // new Icon(Icons.notifications),
-                  new ImageIcon(
-                    AssetImage('assets/list.png'),
+              icon: new Badge(
+                badgeColor: Colors.yellow,
+                position: BadgePosition.topEnd(top: -8, end: -10),
+                animationDuration: Duration(milliseconds: 300),
+                animationType: BadgeAnimationType.slide,
+                badgeContent: Text('27',
+                    style: TextStyle(fontSize: 8, color: Colors.black)),
+                child: new ImageIcon(
+                  AssetImage(
+                    'assets/list.png',
                   ),
-                  new Positioned(
-                    right: 0,
-                    bottom: 11,
-                    child: new Container(
-                      padding: EdgeInsets.all(1),
-                      decoration: new BoxDecoration(
-                        color: Colors.yellow,
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      constraints: BoxConstraints(
-                        minWidth: 13,
-                        minHeight: 13,
-                      ),
-                      child: new Text(
-                        '12',
-                        style: new TextStyle(
-                          color: Colors.black,
-                          fontSize: 8,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  )
-                ],
+                  // color: Colors.grey,
+                ),
               ),
               // icon: ImageIcon(
               //   AssetImage('assets/list.png'),
@@ -116,36 +101,50 @@ class _HomeState extends State<Home>
 
             BottomNavigationBarItem(
               backgroundColor: Colors.blue,
-              icon: new Stack(
-                children: <Widget>[
-                  new ImageIcon(
-                    AssetImage('assets/mail.png'),
-                    // color: Colors.white,
+              icon: new Badge(
+                badgeColor: Colors.yellow,
+                position: BadgePosition.topEnd(top: -8, end: -10),
+                animationDuration: Duration(milliseconds: 300),
+                animationType: BadgeAnimationType.slide,
+                badgeContent: Text('12',
+                    style: TextStyle(fontSize: 8, color: Colors.black)),
+                child: new ImageIcon(
+                  AssetImage(
+                    'assets/mail.png',
                   ),
-                  new Positioned(
-                    right: 0,
-                    child: new Container(
-                      padding: EdgeInsets.all(1),
-                      decoration: new BoxDecoration(
-                        color: Colors.yellow,
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      constraints: BoxConstraints(
-                        minWidth: 13,
-                        minHeight: 13,
-                      ),
-                      child: new Text(
-                        '2',
-                        style: new TextStyle(
-                          color: Colors.black,
-                          fontSize: 8,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  )
-                ],
+                  // color: Colors.grey,
+                ),
               ),
+              // icon: new Stack(
+              //   children: <Widget>[
+              //     new ImageIcon(
+              //       AssetImage('assets/mail.png'),
+              //       // color: Colors.white,
+              //     ),
+              //     new Positioned(
+              //       right: 0,
+              //       child: new Container(
+              //         padding: EdgeInsets.all(1),
+              //         decoration: new BoxDecoration(
+              //           color: Colors.yellow,
+              //           borderRadius: BorderRadius.circular(6),
+              //         ),
+              //         constraints: BoxConstraints(
+              //           minWidth: 13,
+              //           minHeight: 13,
+              //         ),
+              //         child: new Text(
+              //           '2',
+              //           style: new TextStyle(
+              //             color: Colors.black,
+              //             fontSize: 8,
+              //           ),
+              //           textAlign: TextAlign.center,
+              //         ),
+              //       ),
+              //     )
+              //   ],
+              // ),
               // icon: ImageIcon(
               //   AssetImage('assets/mail.png'),
               //   // color: Colors.white,
