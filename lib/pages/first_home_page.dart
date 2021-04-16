@@ -131,7 +131,7 @@ class HomeBody extends StatelessWidget {
                       ),
                       Container(
                         height: 100,
-                        width: 120,
+                        width: 90,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage("assets/comp3.png"),
@@ -427,7 +427,7 @@ class HomeBody extends StatelessWidget {
                 height: 95,
                 // color: Colors.blue,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(106, 166, 220, 1),
+                  color: Colors.red[800],
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(5),
                     bottomLeft: Radius.circular(5),

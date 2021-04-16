@@ -49,11 +49,13 @@ class Terms extends StatelessWidget {
               children: [
                 RichText(
                   text: TextSpan(
-                    text: '1. ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black),
                     /*defining default style is optional */
                     children: <TextSpan>[
+                      TextSpan(
+                          text: '1.',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black)),
                       TextSpan(
                           text:
                               'I have approached the respective Bank for the redressal of my grievance / complaint, lodged a complaint formally and have',
@@ -88,11 +90,13 @@ class Terms extends StatelessWidget {
               children: [
                 RichText(
                   text: TextSpan(
-                    text: '2.  ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black),
                     /*defining default style is optional */
                     children: <TextSpan>[
+                      TextSpan(
+                          text: '2.',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black)),
                       TextSpan(
                           text: '7 working days',
                           style: TextStyle(
@@ -114,11 +118,13 @@ class Terms extends StatelessWidget {
               children: [
                 RichText(
                   text: TextSpan(
-                    text: '3.  ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black),
                     /*defining default style is optional */
                     children: <TextSpan>[
+                      TextSpan(
+                          text: '3.',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black)),
                       TextSpan(
                           text: 'My complaint is',
                           style: TextStyle(color: Colors.black)),
@@ -144,11 +150,13 @@ class Terms extends StatelessWidget {
               children: [
                 RichText(
                   text: TextSpan(
-                    text: '4.  ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black),
                     /*defining default style is optional */
                     children: <TextSpan>[
+                      TextSpan(
+                          text: '4.',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black)),
                       TextSpan(
                           text:
                               'Subject Complaint has not been escalated to any other forum and not in process / pending in any court of Law, Banking Mohtasib Pakistan or Law enforcement agencies i.e. NAB, FIA etc.',
@@ -165,11 +173,13 @@ class Terms extends StatelessWidget {
               children: [
                 RichText(
                   text: TextSpan(
-                    text: '5.  ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black),
                     /*defining default style is optional */
                     children: <TextSpan>[
+                      TextSpan(
+                          text: '5.',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black)),
                       TextSpan(
                           text:
                               'I will provide all the information based on the facts and undertake that it will be true and to the best of my knowledge.',
@@ -186,11 +196,13 @@ class Terms extends StatelessWidget {
               children: [
                 RichText(
                   text: TextSpan(
-                    text: '6.  ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black),
                     /*defining default style is optional */
                     children: <TextSpan>[
+                      TextSpan(
+                          text: '6.',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black)),
                       TextSpan(
                           text: 'Click the Agree Button for Registration.',
                           style: TextStyle(color: Colors.black)),
