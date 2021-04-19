@@ -85,7 +85,7 @@ class ComplainCardWidget extends StatelessWidget {
                     'Bank staff not helping me out.',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w500),
                     textAlign: TextAlign.left,
                   ),
@@ -114,7 +114,7 @@ class ComplainCardWidget extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(191, 0, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(144, 0, 0, 0),
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(

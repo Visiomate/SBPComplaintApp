@@ -3,6 +3,7 @@ import 'package:sbp_complaints_management/classes/language.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/main.dart';
 import 'package:sbp_complaints_management/pages/sign_in_page.dart';
+import 'package:sbp_complaints_management/pages/sign_up_page.dart';
 import 'package:sbp_complaints_management/pages/termsAndCondition.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 
@@ -73,53 +74,60 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         child: SizedBox(
                           height: 40,
-                          width: 278,
+                          width: 238,
                           child: Container(
-                            padding: EdgeInsets.fromLTRB(25, 0, 15, 0),
+                            padding: EdgeInsets.fromLTRB(25, 0, 20, 0),
                             child: Directionality(
                               textDirection: TextDirection.ltr,
-                              child: Center(
-                                child: DropdownButtonHideUnderline(
-                                  child: DropdownButton<Language>(
-                                    isExpanded: true,
-                                    isDense: true,
-                                    iconSize: 30,
-                                    hint: Text(
-                                      DemoLocalization.of(context)
-                                          .getTranslatedValue('langname'),
-                                    ),
-                                    onChanged: (Language language) {
-                                      _changeLanguage(language);
-                                    },
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    flex: 1,
+                                    child: Center(
+                                      child: DropdownButtonHideUnderline(
+                                        child: DropdownButton<Language>(
+                                          isExpanded: true,
+                                          isDense: true,
+                                          iconSize: 30,
+                                          hint: Text(
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue('langname'),
+                                          ),
+                                          onChanged: (Language language) {
+                                            _changeLanguage(language);
+                                          },
 
-                                    underline: SizedBox(),
-                                    // icon: Icon(
-                                    //   Icons.language,
-                                    //   color: Colors.green,
-                                    // ),
-                                    items: Language.languageList()
-                                        .map<DropdownMenuItem<Language>>(
-                                            (lang) => DropdownMenuItem(
-                                                  value: lang,
-                                                  child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceAround,
-                                                    children: <Widget>[
-                                                      Text(
-                                                        lang.flag,
-                                                      ),
-                                                      Text(
-                                                        lang.name,
-                                                        style: TextStyle(
-                                                            fontSize: 30),
-                                                      )
-                                                    ],
-                                                  ),
-                                                ))
-                                        .toList(),
+                                          underline: SizedBox(),
+                                          // icon: Icon(
+                                          //   Icons.language,
+                                          //   color: Colors.green,
+                                          // ),
+                                          items: Language.languageList()
+                                              .map<DropdownMenuItem<Language>>(
+                                                  (lang) => DropdownMenuItem(
+                                                        value: lang,
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceAround,
+                                                          children: <Widget>[
+                                                            Text(
+                                                              lang.flag,
+                                                            ),
+                                                            Text(
+                                                              lang.name,
+                                                              style: TextStyle(
+                                                                  fontSize: 30),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ))
+                                              .toList(),
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                ],
                               ),
                             ),
                           ),
@@ -165,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Button(
                         onPress: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => TermsAndCondition()));
+                              builder: (context) => SignUpPage()));
                         },
                         text: DemoLocalization.of(context)
                             .getTranslatedValue('signup'),

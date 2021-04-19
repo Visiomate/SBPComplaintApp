@@ -117,7 +117,33 @@
     "bankProv": "Bank Province",
     "otherBankInf": "Other Branch Info",
     "complaintCategory" : "Complaint Category",
-    "complnSubCate": "Complaint Sub Category"
+    "complnSubCate": "Complaint Sub Category",
+
+    "homes": "Home",
+
+    "totalComplain": "TOTAL COMPLAINTS",
+    "opens": "OPEN",
+    "cmplaints": "COMPLAINTS",
+    "closd": "CLOSED",
+
+    "rejctdComplnts": "REJECTED COMPLAINTS",
+
+    "feedbcks": "FEEDBACKS",
+
+    "postive": "POSITIVE",
+
+    "negatve": "NEGATIVE",
+
+    "send": "send",
+
+    "emailSendCode": "Enter the email address associated with your account to get password reset code.",
+
+    "submit": "submit",
+
+    "newPass": "New Password",
+
+    "enter6digitVCod": "Enter 6 digit code",
+    "sndCodeEmail": "We have send you code on your email address"
 
 
 

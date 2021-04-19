@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
+import 'package:sbp_complaints_management/pages/PassResetCode.dart';
 import 'package:sbp_complaints_management/pages/first_home_page.dart';
 import 'package:sbp_complaints_management/pages/forgotPassPage.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
@@ -7,12 +8,12 @@ import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
 import 'package:email_validator/email_validator.dart';
 
-class SignInPage extends StatefulWidget {
+class ForgotPassPage extends StatefulWidget {
   @override
-  _SignInPageState createState() => _SignInPageState();
+  _ForgotPassPageState createState() => _ForgotPassPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _ForgotPassPageState extends State<ForgotPassPage> {
   String email, password;
   bool isLoginPressed = false;
   bool _passwordVisible;
@@ -36,7 +37,7 @@ class _SignInPageState extends State<SignInPage> {
         textDirection: TextDirection.ltr,
         child: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.fromLTRB(40, 20, 40, 300),
+            padding: EdgeInsets.fromLTRB(40, 20, 40, 150),
             color: Color.fromRGBO(0, 115, 50, 1),
             child: Container(
               padding: EdgeInsets.fromLTRB(20, 100, 20, 0),
@@ -44,15 +45,22 @@ class _SignInPageState extends State<SignInPage> {
                 key: _popUpFormKey,
                 child: Column(
                   children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      height: 140,
-                      width: 140,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/logo_white.png"),
-                            fit: BoxFit.fill),
-                      ),
+                    ImageIcon(
+                      AssetImage('assets/email.png'),
+                      color: Colors.white,
+                      size: 80,
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('emailSendCode'),
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: 40,
@@ -74,42 +82,6 @@ class _SignInPageState extends State<SignInPage> {
                             return null;
                           },
                         ),
-                        SizedBox(height: 10),
-                        CustomTextField(
-                          controller: passwordInputController,
-                          hintText: '***********',
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Password is required';
-                            }
-                            return null;
-                          },
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (context) => ForgotPassPage(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(80, 10, 0, 0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  DemoLocalization.of(context)
-                                      .getTranslatedValue('forGotPass'),
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.white,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
                         SizedBox(height: 20),
                         Container(
                           child: Button(
@@ -117,13 +89,13 @@ class _SignInPageState extends State<SignInPage> {
                               if (_popUpFormKey.currentState.validate()) {
                                 Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(
-                                    builder: (context) => Home(),
+                                    builder: (context) => ResetPassCode(),
                                   ),
                                 );
                               }
                             },
                             text: DemoLocalization.of(context)
-                                .getTranslatedValue('login'),
+                                .getTranslatedValue('send'),
                             color: Color.fromRGBO(11, 175, 89, 1),
                           ),
                         ),

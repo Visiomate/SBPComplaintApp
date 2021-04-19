@@ -27,7 +27,7 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
   Widget build(BuildContext context) {
     // SizeConfig().init(context);
     return Container(
-      height: 300,
+      height: 305,
       padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
@@ -56,7 +56,7 @@ class _NewPassDialogeState extends State<NewPassDialoge> {
       children: [
         Container(
           padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-          height: 340,
+          height: 345,
           width: 300,
           decoration: BoxDecoration(
             color: Color.fromRGBO(232, 232, 232, 1),

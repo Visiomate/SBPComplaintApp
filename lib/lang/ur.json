@@ -37,14 +37,14 @@
 
     "profile": "پروفائل",
     "passReset": "پاس ورڈ ری سیٹ",
-    "editProfBtn": "پروفائل میں ترمیم ",
+    "editProfBtn": "پروفائل ترمیم ",
 
     "update": "اپ ڈیٹ",
 
     "createNewPass": "نیا پاس ورڈ بنائیں",
     "OldPass": "پرانا پاسورڈ",
     "NewPass": "نیا پاس ورڈ",
-    "updatePass": "پاس ورڈ اپ ڈیٹ کریں",
+    "updatePass": "اپ ڈیٹ کریں",
 
     "forGotPass" : "پاسورڈ بھول گے؟",
 
@@ -120,7 +120,30 @@
     "bankProv": "بینک صوبہ",
     "otherBankInf": "برانچ کی دیگر معلومات",
     "complaintCategory" : "شکایت زمرہ",
-    "complnSubCate": "شکایت ذیلی زمرہ"
+    "complnSubCate": "شکایت ذیلی زمرہ",
+
+    "homes": "ہوم",
+    "totalComplain": "کل شکایات",
+
+    "opens": "کھلی",
+    "cmplaints": "شکایت",
+    "closd": "بند",
+
+    "rejctdComplnts": "مسترد شدہ شکایات",
+    "feedbcks": "تاثرات",
+
+    "postive": "مثبت",
+
+    "negatve": "منفی",
+    "send": "بھیجیں",
+
+    "emailSendCode": "پاس ورڈ کو دوبارہ ترتیب دینے کا کوڈ حاصل کرنے کے لئے اپنے اکاؤنٹ سے وابستہ ای میل پتہ درج کریں۔",
+
+    "submit": "جمع کرائیں",
+    "newPass": "نیا پاس ورڈ",
+
+    "enter6digitVCod": "6 ہندسوں کا کوڈ درج کریں",
+    "sndCodeEmail": "ہم نے آپ کے ای میل پتے پر کوڈ بھیج دیا ہے"
 
 
 

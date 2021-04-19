@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
 
@@ -19,7 +20,7 @@ class _FirstHomePageState extends State<FirstHomePage> {
         // iconTheme: IconThemeData(color: Colors.grey),
         title: Center(
           child: Text(
-            'HOME',
+            DemoLocalization.of(context).getTranslatedValue('homes'),
             style: TextStyle(color: Colors.white),
           ),
         ),
@@ -123,7 +124,8 @@ class HomeBody extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        'Create Complaint',
+                        DemoLocalization.of(context)
+                            .getTranslatedValue('registerComp'),
                         style: TextStyle(
                             color: Colors.grey,
                             fontSize: 16,
@@ -145,7 +147,8 @@ class HomeBody extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'Complaints',
+                          DemoLocalization.of(context)
+                              .getTranslatedValue('complain'),
                           style: TextStyle(
                               color: Colors.grey,
                               fontSize: 16,
@@ -195,7 +198,8 @@ class HomeBody extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    'TOTAL COMPLAINTS',
+                                    DemoLocalization.of(context)
+                                        .getTranslatedValue('totalComplain'),
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 12),
                                   ),
@@ -275,7 +279,8 @@ class HomeBody extends StatelessWidget {
                                         Row(
                                           children: [
                                             Text(
-                                              'OPEN',
+                                              DemoLocalization.of(context)
+                                                  .getTranslatedValue('opens'),
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 10),
@@ -285,7 +290,9 @@ class HomeBody extends StatelessWidget {
                                         Row(
                                           children: [
                                             Text(
-                                              'COMPLAINTS',
+                                              DemoLocalization.of(context)
+                                                  .getTranslatedValue(
+                                                      'cmplaints'),
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 10),
@@ -367,7 +374,8 @@ class HomeBody extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text(
-                                            'CLOSED',
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue('closd'),
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 10),
@@ -377,7 +385,9 @@ class HomeBody extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text(
-                                            'COMPLAINTS',
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue(
+                                                    'cmplaints'),
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 10),
@@ -461,7 +471,8 @@ class HomeBody extends StatelessWidget {
                               Row(
                                 children: [
                                   Text(
-                                    'REJECTED COMPLAINTS',
+                                    DemoLocalization.of(context)
+                                        .getTranslatedValue('rejctdComplnts'),
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 12),
                                   ),
@@ -498,7 +509,7 @@ class HomeBody extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'Feedbacks',
+                    DemoLocalization.of(context).getTranslatedValue('feedbcks'),
                     style: TextStyle(
                         color: Colors.grey, fontWeight: FontWeight.w800),
                   ),
@@ -511,7 +522,7 @@ class HomeBody extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Container(
-                        height: 95,
+                        height: 100,
                         padding: EdgeInsets.all(7),
                         decoration: BoxDecoration(
                             color: Colors.grey[100],
@@ -551,7 +562,8 @@ class HomeBody extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text(
-                                            'POSITIVE',
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue('postive'),
                                             style: TextStyle(
                                                 color: Color.fromRGBO(
                                                     86, 191, 109, 1),
@@ -562,7 +574,8 @@ class HomeBody extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text(
-                                            'FEEDBACKS',
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue('feedbcks'),
                                             style: TextStyle(
                                                 color: Color.fromRGBO(
                                                     86, 191, 109, 1),
@@ -587,7 +600,7 @@ class HomeBody extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Container(
-                        height: 95,
+                        height: 100,
                         padding: EdgeInsets.all(7),
                         decoration: BoxDecoration(
                             color: Colors.grey[100],
@@ -627,7 +640,8 @@ class HomeBody extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text(
-                                            'NEGATIVE',
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue('negatve'),
                                             style: TextStyle(
                                                 color: Colors.red,
                                                 fontSize: 10),
@@ -637,7 +651,8 @@ class HomeBody extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text(
-                                            'FEEDBACKS',
+                                            DemoLocalization.of(context)
+                                                .getTranslatedValue('feedbcks'),
                                             style: TextStyle(
                                                 color: Colors.red,
                                                 fontSize: 10),

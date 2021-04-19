@@ -110,15 +110,24 @@ class NotificationCard extends StatelessWidget {
                     padding: EdgeInsets.only(left: 15, top: 20),
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Text(
-                              'You complaint if being  forwarded to the relevant department.',
-                              style:
-                                  TextStyle(color: Colors.blue, fontSize: 10),
-                            ),
-                          ],
-                        )
+                        RichText(
+                          text: TextSpan(
+                            children: <TextSpan>[
+                              TextSpan(
+                                text:
+                                    'You complaint if being  forwarded to the relevant department.',
+                                style:
+                                    TextStyle(color: Colors.blue, fontSize: 10),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        // Text(
+                        //   'You complaint if being  forwarded to the relevant department.',
+                        //   style:
+                        //       TextStyle(color: Colors.blue, fontSize: 10),
+                        // ),
                       ],
                     ),
                   ),
