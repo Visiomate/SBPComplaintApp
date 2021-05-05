@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sbp_complaints_management/api_calls/my_applications_api_client.dart';
 import 'package:sbp_complaints_management/classes/language.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/main.dart';
@@ -52,14 +53,14 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 80,
               ),
-              Row(
+              Column(
                 children: [
                   // Text('Please Select language'),
 
                   Directionality(
                     textDirection: TextDirection.ltr,
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      // padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                       child: DecoratedBox(
                         decoration: ShapeDecoration(
                           color: Colors.white,
@@ -72,64 +73,64 @@ class _LoginScreenState extends State<LoginScreen> {
                                 BorderRadius.all(Radius.circular(15.0)),
                           ),
                         ),
-                        child: SizedBox(
+                        child: Container(
                           height: 40,
                           width: 238,
                           child: Container(
                             padding: EdgeInsets.fromLTRB(25, 0, 20, 0),
-                            child: Directionality(
-                              textDirection: TextDirection.ltr,
-                              child: Row(
-                                children: [
-                                  Expanded(
-                                    flex: 1,
-                                    child: Center(
-                                      child: DropdownButtonHideUnderline(
-                                        child: DropdownButton<Language>(
-                                          isExpanded: true,
-                                          isDense: true,
-                                          iconSize: 30,
-                                          hint: Text(
-                                            DemoLocalization.of(context)
-                                                .getTranslatedValue('langname'),
-                                          ),
-                                          onChanged: (Language language) {
-                                            _changeLanguage(language);
-                                          },
-
-                                          underline: SizedBox(),
-                                          // icon: Icon(
-                                          //   Icons.language,
-                                          //   color: Colors.green,
-                                          // ),
-                                          items: Language.languageList()
-                                              .map<DropdownMenuItem<Language>>(
-                                                  (lang) => DropdownMenuItem(
-                                                        value: lang,
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceAround,
-                                                          children: <Widget>[
-                                                            Text(
-                                                              lang.flag,
-                                                            ),
-                                                            Text(
-                                                              lang.name,
-                                                              style: TextStyle(
-                                                                  fontSize: 30),
-                                                            )
-                                                          ],
-                                                        ),
-                                                      ))
-                                              .toList(),
+                            // child: Directionality(
+                            //   textDirection: TextDirection.ltr,
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  flex: 1,
+                                  child: Center(
+                                    child: DropdownButtonHideUnderline(
+                                      child: DropdownButton<Language>(
+                                        isExpanded: true,
+                                        isDense: true,
+                                        iconSize: 30,
+                                        hint: Text(
+                                          DemoLocalization.of(context)
+                                              .getTranslatedValue('langname'),
                                         ),
+                                        onChanged: (Language language) {
+                                          _changeLanguage(language);
+                                        },
+
+                                        underline: SizedBox(),
+                                        // icon: Icon(
+                                        //   Icons.language,
+                                        //   color: Colors.green,
+                                        // ),
+                                        items: Language.languageList()
+                                            .map<DropdownMenuItem<Language>>(
+                                                (lang) => DropdownMenuItem(
+                                                      value: lang,
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceAround,
+                                                        children: <Widget>[
+                                                          Text(
+                                                            lang.flag,
+                                                          ),
+                                                          Text(
+                                                            lang.name,
+                                                            style: TextStyle(
+                                                                fontSize: 30),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ))
+                                            .toList(),
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
+                            // ),
                           ),
                         ),
                       ),

@@ -3,6 +3,7 @@ import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/first_home_page.dart';
 import 'package:sbp_complaints_management/pages/forgotPassPage.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
+import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
 import 'package:email_validator/email_validator.dart';
@@ -19,6 +20,8 @@ class _SignInPageState extends State<SignInPage> {
   TextEditingController emailInputController;
   TextEditingController passwordInputController;
   final GlobalKey<FormState> _popUpFormKey = GlobalKey<FormState>();
+  FunctionCallRepositry _functionCallRepositry = FunctionCallRepositry();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
   initState() {
@@ -115,11 +118,18 @@ class _SignInPageState extends State<SignInPage> {
                           child: Button(
                             onPress: () {
                               if (_popUpFormKey.currentState.validate()) {
-                                Navigator.of(context).pushReplacement(
-                                  MaterialPageRoute(
-                                    builder: (context) => Home(),
-                                  ),
-                                );
+                                _functionCallRepositry
+                                    .loginRepositry()
+                                    .then((value) {
+                                  showInSnackBar(
+                                      "Congratulation Successful Login With Dio");
+                                }).then((value) {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => Home(),
+                                    ),
+                                  );
+                                });
                               }
                             },
                             text: DemoLocalization.of(context)
@@ -137,5 +147,10 @@ class _SignInPageState extends State<SignInPage> {
         ),
       ),
     );
+  }
+
+  void showInSnackBar(String value) {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(new SnackBar(content: new Text(value)));
   }
 }

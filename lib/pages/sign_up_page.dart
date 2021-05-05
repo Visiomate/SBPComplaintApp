@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/verify.dart';
+import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
 
@@ -21,6 +22,7 @@ class _SignUpPageState extends State<SignUpPage> {
   TextEditingController _mobileController;
   TextEditingController _emailController;
   final GlobalKey<FormState> _popUpFormKey = GlobalKey<FormState>();
+  FunctionCallRepositry _functionCallRepositry = FunctionCallRepositry();
 
   @override
   void initState() {
@@ -172,10 +174,14 @@ class _SignUpPageState extends State<SignUpPage> {
                               child: Button(
                                 onPress: () {
                                   if (_popUpFormKey.currentState.validate()) {
-                                    Navigator.of(context).pushReplacement(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                VerifyScreen()));
+                                    _functionCallRepositry
+                                        .signUpRepositry()
+                                        .then((value) {
+                                      Navigator.of(context).pushReplacement(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  VerifyScreen()));
+                                    });
                                   }
                                 },
                                 text: DemoLocalization.of(context)

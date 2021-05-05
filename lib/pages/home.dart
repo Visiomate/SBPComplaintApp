@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
+import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/card.dart';
 import 'package:sbp_complaints_management/utils/components/complainCard.dart';
 import 'package:sbp_complaints_management/utils/components/const.dart';
@@ -12,6 +13,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  FunctionCallRepositry _functionCallRepositry = FunctionCallRepositry();
   @override
   Widget build(BuildContext context) {
     return WillPopScope(

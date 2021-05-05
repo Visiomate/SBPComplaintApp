@@ -32,9 +32,9 @@ dependencies:
   flutter_pdfview:
   path_provider:
   http:
-  dio: ^3.0.10
+  dio:
   carousel_slider: ^2.1.0
-  shared_preferences: ^2.0.0
+  shared_preferences:
   slider_button: ^0.4.0
   flutter_masked_text: ^0.8.0
   intl: ^0.17.0

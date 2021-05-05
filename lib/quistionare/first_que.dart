@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
 import 'package:sbp_complaints_management/quistionare/second_quest.dart';
+import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
 
@@ -18,6 +19,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
   TextEditingController emailInputController;
   TextEditingController passwordInputController;
   final GlobalKey<FormState> _popUpFormKey = GlobalKey<FormState>();
+  FunctionCallRepositry _functionCallRepositry = FunctionCallRepositry();
 
   @override
   void initState() {
@@ -217,10 +219,14 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                                   left: 8.0, right: 8.0),
                                               child: Button(
                                                 onPress: () {
-                                                  Navigator.of(context).push(
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              SecondQuestionPage()));
+                                                  _functionCallRepositry
+                                                      .complainNumberRepositry()
+                                                      .then((value) {
+                                                    Navigator.of(context).push(
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                SecondQuestionPage()));
+                                                  });
                                                 },
                                                 text: DemoLocalization.of(
                                                         context)

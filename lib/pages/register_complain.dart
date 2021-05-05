@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/edit_profile.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
+import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
@@ -35,6 +36,7 @@ class _RegisterComplainState extends State<RegisterComplain> {
   TextEditingController _cnicController;
   final GlobalKey<FormState> _popUpFormKey = GlobalKey<FormState>();
   final GlobalKey<FormState> _popUpShortFormKey = GlobalKey<FormState>();
+  FunctionCallRepositry _functionCallRepositry = FunctionCallRepositry();
 
   @override
   initState() {
@@ -1392,12 +1394,17 @@ class _RegisterComplainState extends State<RegisterComplain> {
                         Container(
                           child: Button(
                             onPress: () {
+                              _functionCallRepositry
+                                  .complainSubmitRepositry()
+                                  .then((value) {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => Home(),
+                                  ),
+                                );
+                              });
                               // if (_popUpFormKey.currentState.validate()) {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (context) => Home(),
-                                ),
-                              );
+
                               // }
                             },
                             text: DemoLocalization.of(context)

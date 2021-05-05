@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
+import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/notification_card.dart';
 
 class NotificationPge extends StatefulWidget {
@@ -9,6 +10,7 @@ class NotificationPge extends StatefulWidget {
 }
 
 class _NotificationPgeState extends State<NotificationPge> {
+  FunctionCallRepositry _functionCallRepositry = FunctionCallRepositry();
   @override
   Widget build(BuildContext context) {
     return WillPopScope(

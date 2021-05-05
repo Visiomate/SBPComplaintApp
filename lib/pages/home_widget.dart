@@ -53,6 +53,7 @@ class _HomeState extends State<Home>
       //   children: _tablist,
       // ),
       bottomNavigationBar: BottomNavigationBar(
+      
           backgroundColor: Color.fromRGBO(21, 183, 98, 1),
           type: BottomNavigationBarType.fixed,
           // showSelectedLabels: true,

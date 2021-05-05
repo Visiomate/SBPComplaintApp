@@ -31,14 +31,14 @@ class LoginSharedPreferences {
     return prefs.getString('cnic_issue_date');
   }
 
-  addFirstNameStringToSF(String firstName) async {
+  addNameStringToSF(String name) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString('first_name', firstName);
+    await prefs.setString('name', name);
   }
 
-  getFirstNameValuesSF() async {
+  getNameValuesSF() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getString('first_name');
+    return prefs.getString('name');
   }
 
   addMobileNumberStringToSF(String mobileNumber) async {
@@ -61,14 +61,24 @@ class LoginSharedPreferences {
     return prefs.getString('email');
   }
 
-  addAppCountToSF(int count) async {
+  addAddressStringToSF(String address) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('Count', count);
+    await prefs.setString('address', address);
   }
 
-  getAppCountValuesSF() async {
+  getAddresslValuesSF() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    return prefs.getInt('Count');
+    return prefs.getString('address');
+  }
+
+  addOTPStringToSF(String otp) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('otp', otp);
+  }
+
+  getOTPValuesSF() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getString('otp');
   }
 
   clear() async {
