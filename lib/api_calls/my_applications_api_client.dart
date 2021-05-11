@@ -55,9 +55,10 @@ class GetMyApplicationsApiClient extends BaseApiClient {
     var dio = Dio();
     final response = await dio.get('https://google.com');
     print(response.data);
+    print(response.statusCode);
 
-    var res = await http.get('https://github.com/ABDULBASIT450');
-    print(res.statusCode);
+    // var res = await http.get('https://github.com/ABDULBASIT450');
+    // print(res.statusCode);
 
     print('Niceeeeeeeeeeeeeeeeeeeeee Loginnn');
   }

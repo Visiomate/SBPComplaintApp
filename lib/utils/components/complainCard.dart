@@ -114,7 +114,7 @@ class ComplainCardWidget extends StatelessWidget {
                       textAlign: TextAlign.left,
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(144, 0, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(190, 02, 0, 0),
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(
