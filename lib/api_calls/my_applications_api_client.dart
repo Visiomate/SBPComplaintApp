@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/Constants/api_constants.dart';
 import 'package:sbp_complaints_management/Constants/exceptionMsg.dart';
 import 'package:sbp_complaints_management/api_provider/base_api_client.dart';
-import 'package:sbp_complaints_management/utils/login_shared_preference.dart';
+import 'package:sbp_complaints_management/shared_preference/login_shared_preference.dart';
 
 class GetMyApplicationsApiClient extends BaseApiClient {
   LoginSharedPreferences _localDataSource = LoginSharedPreferences();
