@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sbp_complaints_management/pages/complaint_detail.dart';
+import 'package:sbp_complaints_management/pages/complaint/complaint_detail.dart';
 
 class NotificationCard extends StatelessWidget {
   final Widget titles;

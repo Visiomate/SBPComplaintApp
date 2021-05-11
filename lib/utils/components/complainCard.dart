@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
-import 'package:sbp_complaints_management/pages/complaint_detail.dart';
+import 'package:sbp_complaints_management/pages/complaint/complaint_detail.dart';
 import 'package:sbp_complaints_management/pages/notification_page.dart';
 
 class ComplainCardWidget extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
-import 'package:sbp_complaints_management/pages/register_complain.dart';
+import 'package:sbp_complaints_management/pages/complaint/register_complain.dart';
 
 import 'package:sbp_complaints_management/utils/components/button.dart';
 

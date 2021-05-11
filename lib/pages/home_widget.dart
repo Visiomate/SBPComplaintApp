@@ -1,9 +1,8 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:sbp_complaints_management/pages/complain_list.dart';
+import 'package:sbp_complaints_management/pages/complaint/complain_list.dart';
 import 'package:sbp_complaints_management/pages/edit_profile/edit_profile.dart';
 import 'package:sbp_complaints_management/pages/first_home_page.dart';
-import 'package:sbp_complaints_management/pages/home.dart';
 import 'package:sbp_complaints_management/pages/notification_page.dart';
 import 'package:sbp_complaints_management/pages/edit_profile/profile_page.dart';
 
