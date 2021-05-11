@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sbp_complaints_management/api_calls/my_applications_api_client.dart';
 import 'package:sbp_complaints_management/classes/language.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/main.dart';
 import 'package:sbp_complaints_management/pages/sign_in_page.dart';
-import 'package:sbp_complaints_management/pages/sign_up_page.dart';
-import 'package:sbp_complaints_management/pages/termsAndCondition.dart';
+import 'package:sbp_complaints_management/pages/sign_up/sign_up_page.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -60,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Directionality(
                     textDirection: TextDirection.ltr,
                     child: Container(
-                      // padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                       child: DecoratedBox(
                         decoration: ShapeDecoration(
                           color: Colors.white,
@@ -74,17 +72,18 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         child: Container(
+                          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                           height: 40,
-                          width: 238,
+                          width: 270,
                           child: Container(
-                            padding: EdgeInsets.fromLTRB(25, 0, 20, 0),
+                            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                             // child: Directionality(
                             //   textDirection: TextDirection.ltr,
                             child: Row(
                               children: [
                                 Expanded(
                                   flex: 1,
-                                  child: Center(
+                                  child: Container(
                                     child: DropdownButtonHideUnderline(
                                       child: DropdownButton<Language>(
                                         isExpanded: true,

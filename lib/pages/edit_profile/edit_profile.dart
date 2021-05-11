@@ -13,7 +13,6 @@ class EditProfile extends StatefulWidget {
 class _EditProfileState extends State<EditProfile> {
   String email, password;
   bool isLoginPressed = false;
-  bool _passwordVisible;
   TextEditingController firstNameInputController;
   TextEditingController lastNameInputController;
   TextEditingController emailInputController;
@@ -30,7 +29,6 @@ class _EditProfileState extends State<EditProfile> {
     emailInputController = new TextEditingController();
     cnicNumberInputController = new TextEditingController();
 
-    _passwordVisible = true;
     super.initState();
   }
 

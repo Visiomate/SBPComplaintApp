@@ -42,7 +42,6 @@ dependencies:
   email_validator:
   otp_text_field: 1.1.0
   font_awesome_flutter: ^9.0.0
-  easy_localization: ^3.0.0
   badges:
 
 dev_dependencies:

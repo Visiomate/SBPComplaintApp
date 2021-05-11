@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/login_page.dart';
-import 'package:sbp_complaints_management/pages/sign_up_page.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 
 class TermsAndCondition extends StatelessWidget {
@@ -69,17 +67,6 @@ class Terms extends StatelessWidget {
                         TextSpan(
                             text: ' from the bank.',
                             style: TextStyle(color: Colors.black)),
-
-                        // TextSpan(
-                        //     text: ' bold',
-                        //     style: TextStyle(fontWeight: FontWeight.bold)),
-                        // TextSpan(
-                        //     text: ' colorful',
-                        //     style: TextStyle(color: Colors.lightGreenAccent)),
-                        // TextSpan(
-                        //     text: ' large',
-                        //     style:
-                        //         TextStyle(color: Colors.cyanAccent, fontSize: 40)),
                       ],
                     ),
                   )
@@ -217,22 +204,6 @@ class Terms extends StatelessWidget {
             ),
             Row(
               children: [
-                // Expanded(
-                //   flex: 1,
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                //     child: Button(
-                //       onPress: () {
-                //         Navigator.of(context).pushReplacement(MaterialPageRoute(
-                //             builder: (context) => LoginScreen()));
-                //       },
-                //       text: 'Disagree',
-                //       //  DemoLocalization.of(context)
-                //       //     .getTranslatedValue('signup'),
-                //       color: Colors.red,
-                //     ),
-                //   ),
-                // ),
                 Expanded(
                   flex: 1,
                   child: Padding(

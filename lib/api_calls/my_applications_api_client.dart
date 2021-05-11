@@ -106,4 +106,22 @@ class GetMyApplicationsApiClient extends BaseApiClient {
 
     print('Niceeeeeeeeeeeeeeeeeeeeee complainList');
   }
+
+  Future<void> updateProfileRepositry() async {
+    print('${await _localDataSource.getTokenValuesSF()}');
+
+    var res = await http.get('https://github.com/ABDULBASIT450');
+    print(res.statusCode);
+
+    print('Niceeeeeeeeeeeeeeeeeeeeee complainList');
+  }
+
+  Future<void> updatePassRepositry() async {
+    print('${await _localDataSource.getTokenValuesSF()}');
+
+    var res = await http.get('https://github.com/ABDULBASIT450');
+    print(res.statusCode);
+
+    print('Niceeeeeeeeeeeeeeeeeeeeee complainList');
+  }
 }

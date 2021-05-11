@@ -122,12 +122,6 @@ class NotificationCard extends StatelessWidget {
                             ],
                           ),
                         ),
-
-                        // Text(
-                        //   'You complaint if being  forwarded to the relevant department.',
-                        //   style:
-                        //       TextStyle(color: Colors.blue, fontSize: 10),
-                        // ),
                       ],
                     ),
                   ),

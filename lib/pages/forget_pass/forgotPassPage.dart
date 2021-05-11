@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
-import 'package:sbp_complaints_management/pages/PassResetCode.dart';
-import 'package:sbp_complaints_management/pages/first_home_page.dart';
-import 'package:sbp_complaints_management/pages/forgotPassPage.dart';
-import 'package:sbp_complaints_management/pages/home_widget.dart';
+import 'package:sbp_complaints_management/pages/forget_pass/PassResetCode.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
 import 'package:email_validator/email_validator.dart';
@@ -16,7 +13,7 @@ class ForgotPassPage extends StatefulWidget {
 class _ForgotPassPageState extends State<ForgotPassPage> {
   String email, password;
   bool isLoginPressed = false;
-  bool _passwordVisible;
+
   TextEditingController emailInputController;
   TextEditingController passwordInputController;
   final GlobalKey<FormState> _popUpFormKey = GlobalKey<FormState>();
@@ -25,7 +22,7 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
   initState() {
     emailInputController = new TextEditingController();
     passwordInputController = new TextEditingController();
-    _passwordVisible = true;
+
     super.initState();
   }
 
@@ -37,7 +34,7 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
         textDirection: TextDirection.ltr,
         child: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.fromLTRB(40, 20, 40, 150),
+            padding: EdgeInsets.fromLTRB(40, 20, 40, 280),
             color: Color.fromRGBO(0, 115, 50, 1),
             child: Container(
               padding: EdgeInsets.fromLTRB(20, 100, 20, 0),

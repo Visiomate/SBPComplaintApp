@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
-import 'package:sbp_complaints_management/pages/edit_profile.dart';
+import 'package:sbp_complaints_management/pages/edit_profile/edit_profile.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/new_pass_dialog.dart';
@@ -28,18 +28,7 @@ class _ProfilePageState extends State<ProfilePage> {
           title: Text(
             DemoLocalization.of(context).getTranslatedValue('profile'),
           ),
-          // actions: <Widget>[
-          //   Padding(
-          //     padding: EdgeInsets.only(right: 10.0),
-          //     child: GestureDetector(
-          //       onTap: () {},
-          //       child: Icon(
-          //         Icons.file_present,
-          //         size: 26.0,
-          //       ),
-          //     ),
-          //   ),
-          // ],
+         
         ),
         body: ProfileBody(),
       ),

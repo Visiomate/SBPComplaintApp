@@ -14,6 +14,10 @@ class FunctionCallRepositry {
       _getMyApplicationsApiClient.notificationRepositry();
   Future<void> complainListRepositry() =>
       _getMyApplicationsApiClient.complainListRepositry();
-       Future<void> complainSubmitRepositry() =>
+  Future<void> complainSubmitRepositry() =>
       _getMyApplicationsApiClient.complainSubmitRepositry();
+  Future<void> updateProfileRepositry() =>
+      _getMyApplicationsApiClient.updateProfileRepositry();
+  Future<void> updatePassRepositry() =>
+      _getMyApplicationsApiClient.updatePassRepositry();
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
-import 'package:sbp_complaints_management/pages/verify_continue.dart';
+import 'package:sbp_complaints_management/pages/sign_up/verify_continue.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sbp_complaints_management/quistionare/first_que.dart';
+import 'package:sbp_complaints_management/questions/first_que.dart';
 
 class CardWidget extends StatelessWidget {
   final Widget titles;
@@ -31,11 +31,6 @@ class CardWidget extends StatelessWidget {
       onTap: () {
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (context) => FirstQuestion()));
-        // Navigator.of(context).push(
-        //   MaterialPageRoute(
-        //     builder: (context) => RegisterComplain(),
-        //   ),
-        // );
       },
       child: Column(
         children: [
@@ -44,10 +39,6 @@ class CardWidget extends StatelessWidget {
             width: 172,
             decoration: decoratn,
           ),
-          // Image.asset(
-          //   "assets/card.png",
-          //   height: 100,
-          // ),
           Container(
             height: 50,
             width: 172,
@@ -64,11 +55,6 @@ class CardWidget extends StatelessWidget {
                   blurRadius: 6.0,
                 ),
               ],
-
-              // image: new DecorationImage(
-              //   image: new AssetImage("assets/search.png"),
-              //   fit: BoxFit.fill,
-              // ),
             ),
             child: Center(child: txt),
           ),

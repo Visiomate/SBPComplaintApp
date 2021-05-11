@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:sbp_complaints_management/utils/components/complain_detail_card.dart';
+
 
 class ComplaintDetail extends StatefulWidget {
   @override
@@ -86,70 +86,6 @@ class Complaint extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // children: [
-                  //   Container(
-                  //     padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-                  //     child: Row(
-                  //       children: [
-                  //         Row(
-                  //           children: [
-                  //             Text(
-                  //               'Complaint # 1335',
-                  //               style: TextStyle(
-                  //                   color: Colors.white,
-                  //                   fontSize: 14,
-                  //                   fontWeight: FontWeight.w500),
-                  //             ),
-                  //           ],
-                  //         ),
-                  //         Container(
-                  //           padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                  //           child: Column(
-                  //             children: [
-                  //               Row(
-                  //                 children: [
-                  //                   ImageIcon(
-                  //                     AssetImage('assets/calendar.png'),
-                  //                     color: Colors.white,
-                  //                     size: 14,
-                  //                   ),
-                  //                   Text(
-                  //                     'Feb 4, 2021, 4:34 PM',
-                  //                     style: TextStyle(
-                  //                       color: Colors.white,
-                  //                     ),
-                  //                   ),
-                  //                 ],
-                  //               ),
-                  //             ],
-                  //           ),
-                  //         ),
-                  //         SizedBox(
-                  //           height: 1,
-                  //         ),
-                  //         Container(
-                  //           padding: EdgeInsets.fromLTRB(33.0, 0.0, 0.0, 0.0),
-                  //           child: Column(
-                  //             children: [],
-                  //           ),
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ),
-                  //   Container(
-                  //     padding: EdgeInsets.fromLTRB(90, 0, 0, 20),
-                  //     child: FlatButton(
-                  //       onPressed: () {},
-                  //       child: Text(
-                  //         'OPEN',
-                  //         style: TextStyle(
-                  //             color: Colors.white,
-                  //             fontSize: 14,
-                  //             fontWeight: FontWeight.w600),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ],
                 ),
               ),
               Container(

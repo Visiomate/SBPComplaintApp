@@ -2,7 +2,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
-import 'package:sbp_complaints_management/pages/verify.dart';
+import 'package:sbp_complaints_management/pages/sign_up/verify.dart';
 import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
 import 'package:sbp_complaints_management/utils/components/text_fields.dart';
@@ -14,8 +14,6 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   TextEditingController _firstNameController;
-  TextEditingController _lastNameController;
-  TextEditingController _loginIdController;
   TextEditingController _passwordController;
   TextEditingController _reEnterPasswordController;
   TextEditingController _cnicController;
@@ -28,8 +26,6 @@ class _SignUpPageState extends State<SignUpPage> {
   void initState() {
     super.initState();
     _firstNameController = TextEditingController();
-    _lastNameController = TextEditingController();
-    _loginIdController = TextEditingController();
     _passwordController = TextEditingController();
     _reEnterPasswordController = TextEditingController();
     _cnicController = TextEditingController();

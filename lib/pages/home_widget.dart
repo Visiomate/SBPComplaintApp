@@ -1,11 +1,11 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/pages/complain_list.dart';
-import 'package:sbp_complaints_management/pages/edit_profile.dart';
+import 'package:sbp_complaints_management/pages/edit_profile/edit_profile.dart';
 import 'package:sbp_complaints_management/pages/first_home_page.dart';
 import 'package:sbp_complaints_management/pages/home.dart';
 import 'package:sbp_complaints_management/pages/notification_page.dart';
-import 'package:sbp_complaints_management/pages/profile_page.dart';
+import 'package:sbp_complaints_management/pages/edit_profile/profile_page.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -25,47 +25,17 @@ class _HomeState extends State<Home>
     NotificationPge(),
     ProfilePage(),
     EditProfile(),
-    // OpenChat(),
-    // PastTripsPage(),
-    // PastTripsPage(),
-    // PastTripsPage(),
   ];
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   tabController =
-  //       TabController(initialIndex: 0, length: _tablist.length, vsync: this);
-  // }
-
-  // @override
-  // void dispose() {
-  //   tabController.dispose();
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _tablist[_currentIndex],
-
-      //  TabBarView(
-      //   controller: tabController,
-      //   children: _tablist,
-      // ),
       bottomNavigationBar: BottomNavigationBar(
-      
           backgroundColor: Color.fromRGBO(21, 183, 98, 1),
           type: BottomNavigationBarType.fixed,
           // showSelectedLabels: true,
           currentIndex: _currentIndex,
           onTap: onTabTapped,
-
-          // (currentIndex) {
-          //   setState(() {
-          //     _currentIndex = currentIndex;
-          //   });
-          //   tabController.animateTo(_currentIndex);
-          // },
           fixedColor: Colors.white,
           items: [
             BottomNavigationBarItem(
@@ -99,7 +69,6 @@ class _HomeState extends State<Home>
               // ),
               label: '_____',
             ),
-
             BottomNavigationBarItem(
               backgroundColor: Colors.blue,
               icon: new Badge(
@@ -116,40 +85,6 @@ class _HomeState extends State<Home>
                   // color: Colors.grey,
                 ),
               ),
-              // icon: new Stack(
-              //   children: <Widget>[
-              //     new ImageIcon(
-              //       AssetImage('assets/mail.png'),
-              //       // color: Colors.white,
-              //     ),
-              //     new Positioned(
-              //       right: 0,
-              //       child: new Container(
-              //         padding: EdgeInsets.all(1),
-              //         decoration: new BoxDecoration(
-              //           color: Colors.yellow,
-              //           borderRadius: BorderRadius.circular(6),
-              //         ),
-              //         constraints: BoxConstraints(
-              //           minWidth: 13,
-              //           minHeight: 13,
-              //         ),
-              //         child: new Text(
-              //           '2',
-              //           style: new TextStyle(
-              //             color: Colors.black,
-              //             fontSize: 8,
-              //           ),
-              //           textAlign: TextAlign.center,
-              //         ),
-              //       ),
-              //     )
-              //   ],
-              // ),
-              // icon: ImageIcon(
-              //   AssetImage('assets/mail.png'),
-              //   // color: Colors.white,
-              // ),
               label: '_____',
             ),
             BottomNavigationBarItem(
@@ -160,11 +95,6 @@ class _HomeState extends State<Home>
               ),
               label: '_____',
             ),
-            // BottomNavigationBarItem(
-            //   icon: new Icon(Icons.thumb_up),
-            //   // ignore: deprecated_member_use
-            //   title: new Text("Like"),
-            // ),
           ]),
     );
   }

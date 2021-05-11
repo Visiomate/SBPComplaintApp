@@ -3,9 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/card.dart';
-import 'package:sbp_complaints_management/utils/components/complainCard.dart';
-import 'package:sbp_complaints_management/utils/components/const.dart';
-import 'package:sbp_complaints_management/utils/components/notification_card.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,43 +13,28 @@ class _HomePageState extends State<HomePage> {
   FunctionCallRepositry _functionCallRepositry = FunctionCallRepositry();
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      // onWillPop: () async => false,
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromRGBO(21, 183, 98, 1),
-          title: Text(
-            DemoLocalization.of(context).getTranslatedValue('newCompl'),
-          ),
-          actions: <Widget>[
-            IconButton(
-                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
-                icon: FaIcon(FontAwesomeIcons.powerOff),
-                iconSize: 20,
-                onPressed: () {
-                  print("Pressed");
-                }),
-            // Padding(
-            //   padding: EdgeInsets.only(right: 10.0),
-            //   child: GestureDetector(
-            //     onTap: () {
-            //       print('logout press');
-            //     },
-            //     child: FaIcon(FontAwesomeIcons.powerOff),
-            //     // ImageIcon(
-            //     //   AssetImage('assets/dsa.png'),
-            //     //   size: 20,
-            //     //   color: Colors.white,
-            //     // ),
-            //   ),
-            // ),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(21, 183, 98, 1),
+        title: Text(
+          DemoLocalization.of(context).getTranslatedValue('newCompl'),
         ),
-        body: Directionality(
-          textDirection: TextDirection.ltr,
-          child: Container(
-            child:
-                ListView(padding: const EdgeInsets.all(8), children: <Widget>[
+        actions: <Widget>[
+          IconButton(
+              // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+              icon: FaIcon(FontAwesomeIcons.powerOff),
+              iconSize: 20,
+              onPressed: () {
+                print("Pressed");
+              }),
+        ],
+      ),
+      body: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Container(
+          child: ListView(
+            padding: const EdgeInsets.all(8),
+            children: <Widget>[
               Container(
                 padding: const EdgeInsets.only(bottom: 4),
                 child: Row(
@@ -69,12 +51,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry1'),
@@ -122,12 +98,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry3'),
@@ -175,12 +145,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry5'),
@@ -228,12 +192,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry7'),
@@ -281,12 +239,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry9'),
@@ -334,12 +286,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry11'),
@@ -387,12 +333,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry13'),
@@ -440,12 +380,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry15'),
@@ -493,12 +427,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry17'),
@@ -546,12 +474,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry19'),
@@ -599,12 +521,6 @@ class _HomePageState extends State<HomePage> {
                             topLeft: Radius.circular(15),
                           ),
                         ),
-                        // decoratn: new BoxDecoration(
-                        //   image: new DecorationImage(
-                        //     image: new AssetImage("assets/card.png"),
-                        //     fit: BoxFit.fill,
-                        //   ),
-                        // ),
                         txt: Text(
                           DemoLocalization.of(context)
                               .getTranslatedValue('categry21'),
@@ -635,56 +551,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              SizedBox(height: 15),
-
-              // ComplainCardWidget(
-
-              // titles: Text('Back staff  Not Helping'),
-              // subtitles: Text('Category 4'),
-
-              // Container(
-              //   // color: Colors.white,
-              //   // margin: EdgeInsets.all(100.0),
-              //   height: 500,
-              //   width: 70,
-              //   alignment: Alignment.topRight,
-              //   decoration: BoxDecoration(
-              //     color: Colors.white,
-              //     borderRadius: BorderRadius.only(
-              //       topLeft: Radius.circular(25.0),
-              //       bottomLeft: Radius.circular(25.0),
-              //     ),
-              //   ),
-
-              //   child: Align(
-              //     // mainAxisAlignment: MainAxisAlignment.end,
-              //     alignment: Alignment.topRight,
-              //     child: Column(
-              //       children: [
-              //         Text('hello'),
-              //         Text('hello'),
-              //       ],
-              //     ),
-              //     // FlatButton(
-              //     //   onPressed: () {},
-              //     //   child: Text('hello'),
-              //     //   color: Colors.white,
-              //     // ),
-              //     // FlatButton(
-              //     //   onPressed: () {},
-              //     //   child: Text('hello'),
-              //     //   color: Colors.white,
-              //     // )
-              //   ),
-              // ),
-              // ),
-              // NotificationCard(
-              //   brdrRad: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(15.0),
-              //       side: BorderSide(color: Colors.grey)),
-              //   color: Colors.white,
-              // ),
-            ]),
+            ],
           ),
         ),
       ),

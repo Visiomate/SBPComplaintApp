@@ -1,9 +1,7 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
 import 'package:sbp_complaints_management/pages/home.dart';
-import 'package:sbp_complaints_management/pages/home_widget.dart';
 
 class FirstHomePage extends StatefulWidget {
   @override
@@ -24,76 +22,8 @@ class _FirstHomePageState extends State<FirstHomePage> {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        actions: <Widget>[
-          // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
-          // Badge(
-          //   position: BadgePosition.topEnd(top: 8, end: 32),
-          //   animationDuration: Duration(milliseconds: 300),
-          //   animationType: BadgeAnimationType.slide,
-          //   badgeContent:
-          //       Text('27', style: TextStyle(fontSize: 8, color: Colors.white)),
-          //   child: IconButton(
-          //       icon: new ImageIcon(
-          //         AssetImage(
-          //           'assets/mail.png',
-          //         ),
-          //         color: Colors.grey,
-          //       ),
-          //       onPressed: () {}),
-          // ),
-
-          // Padding(
-          //   padding: EdgeInsets.only(right: 10.0),
-          //   child: GestureDetector(
-          //     onTap: () {
-          //       print('logout press');
-          //     },
-          //     child: FaIcon(FontAwesomeIcons.powerOff),
-          //     // ImageIcon(
-          //     //   AssetImage('assets/dsa.png'),
-          //     //   size: 20,
-          //     //   color: Colors.white,
-          //     // ),
-          //   ),
-          // ),
-        ],
       ),
       body: HomeBody(),
-      // drawer: Drawer(
-      //   // Add a ListView to the drawer. This ensures the user can scroll
-      //   // through the options in the drawer if there isn't enough vertical
-      //   // space to fit everything.
-      //   child: ListView(
-      //     // Important: Remove any padding from the ListView.
-      //     padding: EdgeInsets.zero,
-      //     children: <Widget>[
-      //       DrawerHeader(
-      //         child: Text('Drawer Header'),
-      //         decoration: BoxDecoration(
-      //           color: Colors.blue,
-      //         ),
-      //       ),
-      //       ListTile(
-      //         title: Text('Item 1'),
-      //         onTap: () {
-      //           // Update the state of the app
-      //           // ...
-      //           // Then close the drawer
-      //           Navigator.pop(context);
-      //         },
-      //       ),
-      //       ListTile(
-      //         title: Text('Item 2'),
-      //         onTap: () {
-      //           // Update the state of the app
-      //           // ...
-      //           // Then close the drawer
-      //           Navigator.pop(context);
-      //         },
-      //       ),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }
@@ -409,20 +339,7 @@ class HomeBody extends StatelessWidget {
                                       onPressed: () {
                                         print("Pressed");
                                       }),
-                                  // decoration: BoxDecoration(
-                                  //   image: DecorationImage(
-                                  //       image: AssetImage("assets/c3.png"),
-                                  //       fit: BoxFit.fill),
-                                  //   borderRadius: BorderRadius.only(
-                                  //     topRight: Radius.circular(15),
-                                  //     topLeft: Radius.circular(15),
-                                  //   ),
-                                  // ),
                                 ),
-                                // ImageIcon(
-                                //   AssetImage('assets/c3.png'),
-                                //   color: Colors.white,
-                                // ),
                               ],
                             ),
                           ],
@@ -435,7 +352,6 @@ class HomeBody extends StatelessWidget {
               Container(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                 height: 95,
-                // color: Colors.blue,
                 decoration: BoxDecoration(
                   color: Colors.red[800],
                   borderRadius: BorderRadius.only(
@@ -675,162 +591,6 @@ class HomeBody extends StatelessWidget {
                   ],
                 ),
               ),
-              // SizedBox(height: 10),
-              // Container(
-              //   padding: const EdgeInsets.only(bottom: 4),
-              //   child: Row(
-              //     children: [
-              //       Expanded(
-              //         flex: 1,
-              //         child: Container(
-              //           height: 95,
-              //           padding: EdgeInsets.all(7),
-              //           decoration: BoxDecoration(
-              //               color: Colors.grey[100],
-              //               borderRadius: BorderRadius.only(
-              //                 bottomRight: Radius.circular(5),
-              //                 bottomLeft: Radius.circular(5),
-              //                 topRight: Radius.circular(5),
-              //                 topLeft: Radius.circular(5),
-              //               ),
-              //               border: Border.all(color: Colors.grey)),
-              //           child: Column(
-              //             children: [
-              //               Center(
-              //                 child: Padding(
-              //                   padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-              //                   child: Row(
-              //                     children: [
-              //                       Text(
-              //                         '0',
-              //                         style: TextStyle(
-              //                           fontSize: 18,
-              //                           fontWeight: FontWeight.w800,
-              //                           color: Color.fromRGBO(240, 172, 66, 1),
-              //                         ),
-              //                       ),
-              //                     ],
-              //                   ),
-              //                 ),
-              //               ),
-              //               SizedBox(height: 10),
-              //               // Row(
-              //               //   children: [
-              //               //     Expanded(
-              //               //       flex: 1,
-              //               //       child: Column(
-              //               //         children: [
-              //               //           Row(
-              //               //             children: [
-              //               //               Text(
-              //               //                 'PENDING',
-              //               //                 style: TextStyle(
-              //               //                     color: Color.fromRGBO(
-              //               //                         240, 172, 66, 1),
-              //               //                     fontSize: 10),
-              //               //               ),
-              //               //             ],
-              //               //           ),
-              //               //           Row(
-              //               //             children: [
-              //               //               Text(
-              //               //                 'FEEDBACKS',
-              //               //                 style: TextStyle(
-              //               //                     color: Color.fromRGBO(
-              //               //                         240, 172, 66, 1),
-              //               //                     fontSize: 10),
-              //               //               ),
-              //               //             ],
-              //               //           ),
-              //               //         ],
-              //               //       ),
-              //               //     ),
-              //               //     Icon(
-              //               //       Icons.timelapse,
-              //               //       color: Color.fromRGBO(240, 172, 66, 1),
-              //               //     ),
-              //               //   ],
-              //               // ),
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //       SizedBox(width: 10),
-              //       Expanded(
-              //         flex: 1,
-              //         child: Container(
-              //           height: 95,
-              //           padding: EdgeInsets.all(7),
-              //           decoration: BoxDecoration(
-              //               color: Colors.grey[100],
-              //               borderRadius: BorderRadius.only(
-              //                 bottomRight: Radius.circular(5),
-              //                 bottomLeft: Radius.circular(5),
-              //                 topRight: Radius.circular(5),
-              //                 topLeft: Radius.circular(5),
-              //               ),
-              //               border: Border.all(color: Colors.grey)),
-              //           child: Column(
-              //             children: [
-              //               Center(
-              //                 child: Padding(
-              //                   padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
-              //                   child: Row(
-              //                     children: [
-              //                       Text(
-              //                         '42',
-              //                         style: TextStyle(
-              //                             fontSize: 18,
-              //                             fontWeight: FontWeight.w800,
-              //                             color: Colors.red),
-              //                       ),
-              //                     ],
-              //                   ),
-              //                 ),
-              //               ),
-              //               SizedBox(height: 10),
-              //               Row(
-              //                 children: [
-              //                   Expanded(
-              //                     flex: 1,
-              //                     child: Column(
-              //                       children: [
-              //                         Row(
-              //                           children: [
-              //                             Text(
-              //                               'DROPPED',
-              //                               style: TextStyle(
-              //                                   color: Colors.red,
-              //                                   fontSize: 10),
-              //                             ),
-              //                           ],
-              //                         ),
-              //                         Row(
-              //                           children: [
-              //                             Text(
-              //                               'COMPLAINTS',
-              //                               style: TextStyle(
-              //                                   color: Colors.red,
-              //                                   fontSize: 10),
-              //                             ),
-              //                           ],
-              //                         ),
-              //                       ],
-              //                     ),
-              //                   ),
-              //                   Icon(
-              //                     Icons.delete,
-              //                     color: Colors.red,
-              //                   ),
-              //                 ],
-              //               ),
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
             ],
           ),
         ),

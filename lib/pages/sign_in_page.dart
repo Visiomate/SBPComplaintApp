@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sbp_complaints_management/localization/demo_localization.dart';
-import 'package:sbp_complaints_management/pages/first_home_page.dart';
-import 'package:sbp_complaints_management/pages/forgotPassPage.dart';
+import 'package:sbp_complaints_management/pages/forget_pass/forgotPassPage.dart';
 import 'package:sbp_complaints_management/pages/home_widget.dart';
 import 'package:sbp_complaints_management/repositry/function_call_method.dart';
 import 'package:sbp_complaints_management/utils/components/button.dart';
@@ -97,7 +96,7 @@ class _SignInPageState extends State<SignInPage> {
                             );
                           },
                           child: Container(
-                            padding: EdgeInsets.fromLTRB(80, 10, 0, 0),
+                            padding: EdgeInsets.fromLTRB(110, 10, 0, 0),
                             child: Row(
                               children: [
                                 Text(
